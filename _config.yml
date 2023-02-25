@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Julie A. Vera"
-  avatar           : "profile.png"
+  avatar           : "https://julievera.github.io/files/profile.png"
   bio              : "PhD student, Human Centered Design & Engineering @ Univeristy of Washington"
   location         : "Seattle, WA"
   employer         :
