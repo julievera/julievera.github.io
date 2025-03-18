@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie A. Vera - HCI Researcher & UX Researcher</title>
+    <meta name="description" content="HCI researcher specializing in sensemaking, crisis informatics, and UX research with expertise in livestream coordination and weather emergency response.">
+    <meta name="keywords" content="HCI, human-computer interaction, UX research, crisis informatics, sensemaking, weather forecasting, livestreams, user experience, program management">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #d2ecf1;
+            --accent-color: #e64c3b;
+            --light-color: #f0f0f0;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --link-color: #587c85;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        main {
+            margin-top: 4rem;
+        }
+        
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background-color: white;
+        }
+        
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            background-color: var(--secondary-color);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p.tagline {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .expertise {
+            background-color: var(--light-color);
+            text-align: center;
+        }
+        
+        .expertise h2 {
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .expertise-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .expertise-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .expertise-item h3 {
+            margin: 1rem 0;
+            color: var(--primary-color);
+        }
+        
+        .intro {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .intro h2 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .featured {
+            background-color: var(--light-color);
+        }
+        
+        .featured h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .featured-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-image {
+            height: 200px;
+            background-color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .featured-content {
+            padding: 1.5rem;
+        }
+        
+        .featured-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .featured-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .featured-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tag {
+            background-color: var(--light-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        .cta {
+            text-align: center;
+            background-color: white;
+        }
+        
+        .cta h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Your Name</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <!-- Replace with your photo -->
+                <img src="/api/placeholder/200/200" alt="Your Name" class="hero-image">
+            </div>
+            <h1>Your Name</h1>
+            <p class="tagline">HCI Researcher & UX Professional specializing in crisis informatics, sensemaking, and digital coordination</p>
+            <p>PhD Candidate (ABD) in Human-Computer Interaction with 10+ years of industry experience</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn">View Portfolio</a>
+                <a href="#" class="btn btn-outline">Download Resume</a>
+            </div>
+        </section>
+        
+        <section class="intro" id="about">
+            <h2>About Me</h2>
+            <p>I'm an HCI researcher and UX professional with a focus on how people make sense of information during crisis events. My dissertation research explores coordination and sensemaking within YouTube livestreams during severe weather events, examining how forecasters and viewers collaborate to understand and respond to emerging threats.</p>
+            <p>With over a decade of experience in marketing, advertising, and UX research, I bridge academic rigor with practical industry applications. I'm passionate about designing user experiences that help people navigate complex information landscapes, particularly in high-stakes situations.</p>
+            <a href="about.html" class="btn">Learn More About Me</a>
+        </section>
+        
+        <section class="expertise">
+            <h2>Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h3>Crisis Informatics</h3>
+                    <p>Studying information flow and coordination during severe weather events and other crisis situations.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Sensemaking</h3>
+                    <p>Analyzing how individuals and groups gather, interpret, and act on complex information.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>UX Research</h3>
+                    <p>Conducting user studies, interviews, and evaluations to inform design decisions.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Digital Coordination</h3>
+                    <p>Exploring how people coordinate actions in online spaces, particularly during livestreams.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="featured" id="research">
+            <h2>Featured Work</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-image">Dissertation Research</div>
+                    <div class="featured-content">
+                        <h3>Sensemaking in Severe Weather Livestreams</h3>
+                        <div class="featured-tags">
+                            <span class="tag">Crisis Informatics</span>
+                            <span class="tag">Livestreams</span>
+                            <span class="tag">Coordination</span>
+                        </div>
+                        <p>Examining how weather forecasters and viewers collectively make sense of severe weather threats through YouTube livestreams.</p>
+                        <a href="research.html" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-image">UX Case Study</div>
+                    <div class="featured-content">
+                        <h3>Redesigning Emergency Information Systems</h3>
+                        <div class="featured-tags">
+                            <span class="tag">UX Research</span>
+                            <span class="tag">Information Design</span>
+                            <span class="tag">User Testing</span>
+                        </div>
+                        <p>A comprehensive redesign of emergency alert systems based on user research and cognitive principles.</p>
+                        <a href="portfolio.html" class="btn btn-outline">View Case Study</a>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-image">Publication</div>
+                    <div class="featured-content">
+                        <h3>Coordination Mechanisms in Crisis Communication</h3>
+                        <div class="featured-tags">
+                            <span class="tag">CSCW</span>
+                            <span class="tag">Crisis Communication</span>
+                            <span class="tag">HCI</span>
+                        </div>
+                        <p>Published research on how digital platforms facilitate coordination during rapidly evolving crisis situations.</p>
+                        <a href="publications.html" class="btn btn-outline">Read Publication</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta" id="contact">
+            <h2>Let's Connect</h2>
+            <p>I'm currently seeking opportunities in UX Research, Product Management, or Program Management where I can apply my expertise in understanding user needs and information flows.</p>
+            <a href="mailto:your.email@example.com" class="btn">Contact Me</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Google Scholar">Google Scholar</a>
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+            <p>PhD Candidate in Human-Computer Interaction | UX Researcher</p>
+        </div>
+    </footer>
+</body>
+</html>
