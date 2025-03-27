@@ -569,6 +569,64 @@
             .profile-highlights {
                 grid-template-columns: 1fr;
             }
+
+            .expertise-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 15px 0;
+    }
+    
+    .expertise-tag {
+        background-color: var(--primary);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .methods-section {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .methods-section h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: var(--text-primary);
+    }
+    
+    .methods-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    
+    .method-item {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+    }
+    
+    .method-item i {
+        color: var(--primary);
+        font-size: 16px;
+    }
+    
+    @media (max-width: 768px) {
+        .methods-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .expertise-tags {
+            justify-content: center;
+        }
+    }
         }
     </style>
 </head>
@@ -576,13 +634,13 @@
     <header>
         <div class="header-content container">
         <div class="logo">ResearchHub</div>
-        <div class="nav-icons">
+        <!-- <div class="nav-icons">
             <a href="#" title="Home" data-tab-link="feed"><i class="fas fa-home"></i></a>
             <a href="#" title="Projects" data-tab-link="feed"><i class="fas fa-flask"></i></a>
             <a href="#" title="Publications" data-tab-link="feed"><i class="fas fa-book"></i></a>
             <a href="#" title="Blog" data-tab-link="blog"><i class="fas fa-pencil-alt"></i></a>
             <a href="#" title="Contact" data-tab-link="contact"><i class="fas fa-envelope"></i></a>
-    </div>
+        </div> -->
     </div>
     </header>
 
@@ -593,20 +651,68 @@
             </div>
             <div class="profile-info">
                 <h1>Julie A. Vera, M.A., M.S.</h1>
-                <p>Lead UX Researcher | PhD Candidate (ABD) in Human-Computer Interaction & Social Computing</p>
-                <p><i class="fas fa-map-marker-alt"></i> NYC & Remote</p>
+                <p>Lead UX Researcher | PhD Candidate (ABD) in Human Centered Design & Engineering</p>
+                <p><i class="fas fa-map-marker-alt"></i> Seattle, NYC, & Remote</p>
+                
+                <!-- Domain Expertise Tags -->
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Social Computing</span>
+                    <span class="expertise-tag">Crisis Communication</span>
+                    <span class="expertise-tag">Algorithmic Curation</span>
+                    <span class="expertise-tag">Platform Governance</span>
+                </div>
+                
                 <div class="profile-stats">
                     <div class="stat">
-                        <div class="stat-value">10+</div>
+                        <div class="stat-value">12+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat">
                         <div class="stat-value">75+</div>
-                        <div class="stat-label">UX Studies</div>
+                        <div class="stat-label">User Research Studies</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">9</div>
-                        <div class="stat-label">Publications</div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Peer-Reviewed Publications</div>
+                    </div>
+                </div>
+                
+                <!-- Research Methods Grid -->
+                <div class="methods-section">
+                    <h3>Research Methods</h3>
+                    <div class="methods-grid">
+                        <div class="method-item">
+                            <i class="fas fa-comments"></i>
+                            <span>In-depth Interviews</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-users"></i>
+                            <span>Focus Groups</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Usability Testing</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Survey Design</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Journey Mapping</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-binoculars"></i>
+                            <span>Contextual Inquiry</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Think-aloud Protocol</span>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Affinity Mapping</span>
+                        </div>
                     </div>
                 </div>
             </div>
