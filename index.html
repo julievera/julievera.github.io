@@ -575,15 +575,15 @@
 <body>
     <header>
         <div class="header-content container">
-            <div class="logo">ResearchHub</div>
-            <div class="nav-icons">
-                <a href="#" title="Home"><i class="fas fa-home"></i></a>
-                <a href="#" title="Projects"><i class="fas fa-flask"></i></a>
-                <a href="#" title="Publications"><i class="fas fa-book"></i></a>
-                <a href="#" title="Blog"><i class="fas fa-pencil-alt"></i></a>
-                <a href="#" title="Contact"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+        <div class="logo">ResearchHub</div>
+        <div class="nav-icons">
+            <a href="#" title="Home" data-tab-link="feed"><i class="fas fa-home"></i></a>
+            <a href="#" title="Projects" data-tab-link="feed"><i class="fas fa-flask"></i></a>
+            <a href="#" title="Publications" data-tab-link="feed"><i class="fas fa-book"></i></a>
+            <a href="#" title="Blog" data-tab-link="blog"><i class="fas fa-pencil-alt"></i></a>
+            <a href="#" title="Contact" data-tab-link="contact"><i class="fas fa-envelope"></i></a>
+    </div>
+    </div>
     </header>
 
     <main class="container">
@@ -1047,5 +1047,28 @@
                     }
                 });
             });
+
+            // Navigation icon functionality
+            const navIcons = document.querySelectorAll('.nav-icons a');
+            navIcons.forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab-link');
+                    
+                    // Find the corresponding tab and click it
+                    const tab = document.querySelector(`.tab[data-tab="${tabId}"]`);
+                    if (tab) {
+                        tab.click();
+                    }
+                    
+                    // Highlight the clicked icon
+                    navIcons.forEach(i => i.style.color = '');
+                    this.style.color = '#6200ee';
+                });
+            });
+            
+            // Set the first icon as active by default
+            navIcons[0].style.color = '#6200ee';
         });
+        
     </script>
