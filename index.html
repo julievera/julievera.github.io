@@ -57,30 +57,34 @@
             z-index: 100;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
+        
         .header-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Center the logo */
             align-items: center;
             padding: 15px 20px;
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary);
+        
+        .logo-container {
+            text-align: center;
+        }
+        
+        .logo-container img {
+            max-height: 40px;
+            vertical-align: middle;
         }
 
+        /* Only needed if you decide to restore the nav icons */
         .nav-icons {
             display: flex;
             gap: 20px;
         }
-
+        
         .nav-icons a {
             color: var(--text-secondary);
             font-size: 20px;
         }
-
+        
         .nav-icons a:hover {
             color: var(--primary);
         }
@@ -627,32 +631,16 @@
             justify-content: center;
         }
     }
-        .logo img {
-            vertical-align: middle;
-            max-height: 40px;
-        }
-
-            .header-content {
-    display: flex;
-    justify-content: center;
-    padding: 15px 20px;
-}
-
-.logo-container {
-    text-align: center;
-}
-
-.logo-container img {
-    max-height: 40px;
-    vertical-align: middle;
-}
         }
     </style>
+    
 </head>
 <body>
     <header>
         <div class="header-content container">
-            <img src="images/coffeelogo.png" alt="Julie Vera's Logo, a deliberately pixelated, 8-bit image of a bright pink steaming cup of coffee" height="100">
+            <div class="logo-container">
+            <img src="images/your-logo.png" alt="Julie Vera's Research" height="100">
+            </div>
         </div>
     </header>
 
