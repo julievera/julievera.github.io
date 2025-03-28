@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julie Vera | Lead UX Researcher & PhD Candidate</title>
+    <meta name="description" content="Julie Vera is a Lead UX Researcher and PhD Candidate specializing in human-computer interaction, crisis informatics, and social computing research.">
+    <meta name="keywords" content="UX Research, Human-Computer Interaction, Crisis Informatics, Social Computing, TikTok Research, Misinformation, Platform Governance">
     <script src="https://kit.fontawesome.com/71e8b9df83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap">
     <style>
@@ -579,62 +581,62 @@
             }
 
             .expertise-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 15px 0;
-    }
-    
-    .expertise-tag {
-        background-color: var(--primary);
-        color: white;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: 500;
-    }
-    
-    .methods-section {
-        margin-top: 20px;
-        width: 100%;
-    }
-    
-    .methods-section h3 {
-        font-size: 16px;
-        margin-bottom: 10px;
-        color: var(--text-primary);
-    }
-    
-    .methods-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
-    }
-    
-    .method-item {
-        background-color: #f5f5f5;
-        padding: 10px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-    }
-    
-    .method-item i {
-        color: var(--primary);
-        font-size: 16px;
-    }
-    
-    @media (max-width: 768px) {
-        .methods-grid {
-            grid-template-columns: repeat(2, 1fr);
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 15px 0;
+            }
+            
+            .expertise-tag {
+                background-color: var(--primary);
+                color: white;
+                padding: 5px 12px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            
+            .methods-section {
+                margin-top: 20px;
+                width: 100%;
+            }
+            
+            .methods-section h3 {
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: var(--text-primary);
+            }
+            
+            .methods-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+            
+            .method-item {
+                background-color: #f5f5f5;
+                padding: 10px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 14px;
+            }
+            
+            .method-item i {
+                color: var(--primary);
+                font-size: 16px;
+            }
         }
         
-        .expertise-tags {
-            justify-content: center;
-        }
-    }
+        @media (max-width: 768px) {
+            .methods-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .expertise-tags {
+                justify-content: center;
+            }
         }
     </style>
     
@@ -684,28 +686,28 @@
             <div class="tab" data-tab="contact">Contact</div>
         </div>
 
-        <!-- Filter Section -->
-        <div class="filter-section">
-            <div class="filter-title">
-                <i class="fas fa-filter"></i> Filter Feed
-            </div>
-            <div class="filter-options">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="project">Projects</button>
-                <button class="filter-btn" data-filter="publication">Publications</button>
-                <button class="filter-btn" data-filter="talk">Talks</button>
-            </div>
-            <div class="filter-tags">
-                <div class="filter-tag-title">Popular Topics:</div>
-                <span class="filter-tag" data-tag="TikTok">#TikTok</span>
-                <span class="filter-tag" data-tag="Crisis">#Crisis</span>
-                <span class="filter-tag" data-tag="Sensemaking">#Sensemaking</span>
-                <span class="filter-tag" data-tag="UXResearch">#UXResearch</span>
-            </div>
-        </div>
-
         <!-- Portfolio Feed Tab -->
         <div class="tab-content active" id="feed">
+            <!-- Filter Section - NOW INSIDE THE PORTFOLIO TAB -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <i class="fas fa-filter"></i> Filter Feed
+                </div>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="project">Projects</button>
+                    <button class="filter-btn" data-filter="publication">Publications</button>
+                    <button class="filter-btn" data-filter="talk">Talks</button>
+                </div>
+                <div class="filter-tags">
+                    <div class="filter-tag-title">Popular Topics:</div>
+                    <span class="filter-tag" data-tag="TikTok">#TikTok</span>
+                    <span class="filter-tag" data-tag="Crisis">#Crisis</span>
+                    <span class="filter-tag" data-tag="Sensemaking">#Sensemaking</span>
+                    <span class="filter-tag" data-tag="UXResearch">#UXResearch</span>
+                </div>
+            </div>
+            
             <div class="feed">
                 <!-- Project 1 -->
                 <div class="post post-project">
@@ -1137,7 +1139,10 @@
             });
             
             // Set the first icon as active by default
-            navIcons[0].style.color = '#6200ee';
+            if (navIcons.length > 0) {
+                navIcons[0].style.color = '#6200ee';
+            }
         });
-        
     </script>
+</body>
+</html>
