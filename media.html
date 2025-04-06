@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Vera | Media & Presentations</title>
+    <meta name="description" content="Featured publications, presentations and webinars by Julie Vera on UX research and HCI.">
+    <script src="https://kit.fontawesome.com/71e8b9df83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="case-study.css">
+    <style>
+        /* Media section styling */
+        .media-container {
+            margin-bottom: 4rem;
+        }
+        
+        .media-section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        /* Publication card styling */
+        .publication-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        .publication-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .publication-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #222;
+        }
+        
+        .publication-abstract {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+        
+        .publication-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #f0f0f0;
+            color: #333;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+        
+        /* Presentation card styling */
+        .presentation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .presentation-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .presentation-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        .presentation-thumbnail {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .presentation-content {
+            padding: 1.5rem;
+        }
+        
+        .presentation-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        
+        .presentation-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #222;
+        }
+        
+        .presentation-description {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .presentation-venue {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .video-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .video-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .presentation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo, an 8-bit, bright pink pixelated image of a coffee cup." height="60">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Page Header -->
+        <section class="case-study-header">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / 
+                <span>Media & Presentations</span>
+            </div>
+            <h1>Media & Presentations</h1>
+            <p class="section-intro">Featured research publications, presentations, and webinars showcasing my work in UX research and human-computer interaction.</p>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="media-container">
+            <h2 class="media-section-title">Publications & Media</h2>
+            
+            <!-- Publication Card Example -->
+            <div class="publication-card">
+                <div class="publication-meta">
+                    <span><i class="far fa-calendar"></i> 2023</span>
+                    <span><i class="far fa-newspaper"></i> Journal of Social Media Studies</span>
+                </div>
+                <h3 class="publication-title">Facts, Frames, and (Mis)interpretations: Understanding Rumors as Collective Sensemaking</h3>
+                <p class="publication-abstract">This publication explores how social media users collectively make sense of ambiguous information during crisis events. Through analysis of rumor propagation patterns, we identify how framing and interpretative contexts shape the way misinformation evolves and persists within online communities.</p>
+                <div class="publication-tags">
+                    <span class="publication-tag">Misinformation</span>
+                    <span class="publication-tag">Crisis Communication</span>
+                    <span class="publication-tag">Social Media</span>
+                </div>
+                <a href="https://www.cip.uw.edu/2023/12/06/rumors-collective-sensemaking-kate-starbird/" class="publication-link" target="_blank">Read publication <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            
+            <!-- Add more publication cards as needed -->
+        </section>
+        
+        <!-- Presentations Section -->
+        <section class="media-container">
+            <h2 class="media-section-title">Presentations & Webinars</h2>
+            
+            <div class="presentation-grid">
+                <!-- Presentation Card 1 -->
+                <div class="presentation-card">
+                    <img src="images/presentation-thumbnail.jpg" alt="Design Methods & Frameworks presentation thumbnail" class="presentation-thumbnail">
+                    <div class="presentation-content">
+                        <div class="presentation-meta">
+                            <span><i class="far fa-calendar"></i> May 2023</span>
+                        </div>
+                        <h3 class="presentation-title">Know Your User: Design Methods & Frameworks to Use Every Day</h3>
+                        <p class="presentation-venue">Boston Product Management Association</p>
+                        <p class="presentation-description">A practical overview of user research methods and frameworks that product managers can implement in their daily workflows to better understand user needs and behaviors.</p>
+                        <a href="#" class="video-link">
+                            <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/watch?v=1Gt41FL--0M" target="_blank">Watch presentation</a>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Add more presentation cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo" height="40">
+                    <p>&copy; 2025 Julie Vera • All Rights Reserved</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="mailto:jvera@uw.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/julievera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://linktr.ee/julievera" target="_blank"><i class="fas fa-tree"></i></a>
+                        <a href="https://bsky.app/profile/julievera.com" target="_blank"><i class="fas fa-cloud"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle filtering if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any JavaScript functionality you need here
+        });
+    </script>
+</body>
+</html>
