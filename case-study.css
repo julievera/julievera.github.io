@@ -262,7 +262,7 @@ header {
 .toc {
     background-color: var(--surface);
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 30px;
     position: sticky;
     top: 90px;
@@ -270,33 +270,53 @@ header {
 }
 
 .toc h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
     color: var(--primary-dark);
 }
 
 .toc ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 5px;
 }
 
 .toc li {
-    margin-bottom: 8px;
+    margin-bottom: 0;
+    width: calc(33.333% - 10px);
 }
 
 .toc a {
     color: var(--text-secondary);
-    font-size: 15px;
+    font-size: 14px;
     display: block;
-    padding: 5px 0;
+    padding: 3px 0;
     transition: all 0.2s;
-    border-left: 3px solid transparent;
-    padding-left: 10px;
+    border-left: 2px solid transparent;
+    padding-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .toc a:hover, .toc a.active {
     color: var(--primary);
     border-left-color: var(--primary);
     background-color: rgba(255, 0, 168, 0.05);
+}
+
+@media (max-width: 768px) {
+    .toc li {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .toc li {
+        width: 100%;
+    }
 }
 
 /* Content Sections */
