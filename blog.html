@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Vera | Blog</title>
+    <meta name="description" content="Julie Vera's research blog covering UX research, crisis informatics, social computing, and platform governance.">
+    <meta name="keywords" content="UX Research, Human-Computer Interaction, Crisis Informatics, Social Computing, TikTok Research, Misinformation, Platform Governance">
+    <script src="https://kit.fontawesome.com/71e8b9df83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Blog-specific styles */
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .blog-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .blog-header p {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+        
+        .blog-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .blog-nav-button {
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .blog-nav-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .blog-categories {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+        .blog-category {
+            padding: 5px 15px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        
+        .blog-category:hover, .blog-category.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .full-blog-post {
+            background-color: var(--surface);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .blog-post-header {
+            margin-bottom: 20px;
+        }
+        
+        .blog-post-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .blog-post-meta i {
+            margin-right: 5px;
+        }
+        
+        .blog-post-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-post-category {
+            background-color: #eee;
+            padding: 5px 10px;
+            border-radius: 16px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .blog-post-content {
+            line-height: 1.8;
+        }
+        
+        .blog-post-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .blog-post-content h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+        
+        .blog-post-content h3 {
+            font-size: 20px;
+            margin: 25px 0 15px;
+        }
+        
+        .blog-post-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .blog-post-content ul, .blog-post-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .blog-post-content li {
+            margin-bottom: 10px;
+        }
+        
+        .blog-post-content blockquote {
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        
+        .blog-post-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .blog-post-share {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .blog-post-share span {
+            font-weight: bold;
+        }
+        
+        .share-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+        
+        .share-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo, an 8-bit, bright pink pixelated image of a coffee cup." height="120">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Julie Vera's Research Blog</h1>
+            <p>Thoughts on UX research, crisis informatics, social computing, and platform governance</p>
+        </div>
+        
+        <div class="blog-navigation">
+            <a href="index.html" class="blog-nav-button">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <a href="#" class="blog-nav-button">
+                Subscribe <i class="fas fa-rss"></i>
+            </a>
+        </div>
+        
+        <div class="blog-categories">
+            <span class="blog-category active">All</span>
+            <span class="blog-category">Crisis Communication</span>
+            <span class="blog-category">UX Research</span>
+            <span class="blog-category">Social Media</span>
+            <span class="blog-category">Platform Governance</span>
+            <span class="blog-category">Research Methods</span>
+        </div>
+        
+        <!-- First Blog Post -->
+        <article class="full-blog-post" id="disaster-response">
+            <div class="blog-post-header">
+                <h1 class="blog-post-title">The Surprising Role of TikTok in Natural Disaster Response</h1>
+                <div class="blog-post-meta">
+                    <span><i class="far fa-calendar"></i> March 15, 2025</span>
+                    <span><i class="far fa-user"></i> Julie Vera</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <div class="blog-post-categories">
+                    <span class="blog-post-category">Crisis Communication</span>
+                    <span class="blog-post-category">Social Media</span>
+                    <span class="blog-post-category">TikTok</span>
+                </div>
+            </div>
+            
+            <div class="blog-post-content">
+                <p>
+                    In recent years, TikTok has emerged as an unexpected but powerful platform for crisis communication during natural disasters. While emergency management traditionally relies on broadcast media and official channels, our research shows that short-form video content created by everyday users serves a crucial role in information dissemination and emotional processing during crisis events.
+                </p>
+                
+                <img src="https://via.placeholder.com/800x400?text=Crisis+Communication+on+TikTok" alt="Crisis communication on TikTok visualization">
+                
+                <p>
+                    Through our ongoing research, we've identified three key patterns in how TikTok is used during disasters:
+                </p>
+                
+                <h2>1. Real-time documentation and witness accounts</h2>
+                <p>
+                    Unlike traditional media with production delays, TikTok enables immediate distribution of first-person accounts. These raw, unfiltered perspectives provide critical on-the-ground information before official sources can respond. During recent hurricane events, we observed users livestreaming conditions from their neighborhoods when traditional news crews couldn't access affected areas.
+                </p>
+                <p>
+                    The immediacy of this content serves multiple purposes: it alerts others to dangerous conditions, documents the extent of damage for both personal and community records, and creates a real-time visual archive of the disaster as it unfolds. This democratization of disaster reporting means that even remote or overlooked communities can have their experiences documented and shared.
+                </p>
+                
+                <h2>2. Information synthesis and verification</h2>
+                <p>
+                    Creators with no formal journalism training are developing sophisticated fact-checking methods, synthesizing information from multiple sources, and helping their communities make sense of conflicting reports. These informal information brokers often emerge organically from affected communities or from those with personal connections to the disaster areas.
+                </p>
+                <p>
+                    What makes this phenomenon particularly interesting is how these creators build credibility through transparency about their methods, openly discussing their sources and reasoning. Many acknowledge their limitations while still providing value by collating scattered information into coherent narratives. During the 2023 wildfires in Hawaii, several TikTok creators gained substantial followings by aggregating updates from official sources, local residents, and satellite imagery to provide comprehensive situation reports when official communications were delayed.
+                </p>
+                
+                <h2>3. Emotional processing and community support</h2>
+                <p>
+                    Beyond factual information, TikTok provides a space for emotional processing where users share experiences, offer support, and develop collective understanding of traumatic events. The platform's comment sections become impromptu support groups where affected individuals can connect with others experiencing similar circumstances.
+                </p>
+                <p>
+                    This emotional dimension of disaster response is often overlooked in formal emergency management protocols, yet our research suggests it plays a crucial role in community resilience. Users report that seeing others facing similar challenges reduces feelings of isolation and helplessness. The visibility of collective recovery efforts also appears to inspire hope and practical action among those affected.
+                </p>
+                
+                <h3>Implications for emergency management</h3>
+                <p>
+                    These emerging patterns suggest that emergency management agencies should consider how platforms like TikTok complement official communication channels. Rather than viewing social media content as merely a source of misinformation risks, agencies might benefit from understanding how these platforms fulfill communication needs not addressed by traditional approaches.
+                </p>
+                <p>
+                    Our ongoing research aims to develop frameworks for integrating these informal information networks into formal emergency response systems. By acknowledging the validity of diverse information sources and emotional processing needs, we may be able to create more resilient and responsive crisis communication ecosystems.
+                </p>
+                
+                <blockquote>
+                    "The most effective crisis communication systems will be those that recognize and work with, rather than against, the natural ways people seek and share information during disasters." — From our upcoming paper on crisis sensemaking on TikTok
+                </blockquote>
+                
+                <p>
+                    As we continue to explore this emerging field, we welcome input from emergency management professionals, social media researchers, and community stakeholders. The intersection of platform design, user behavior, and crisis response presents rich opportunities for interdisciplinary collaboration and innovation.
+                </p>
+            </div>
+            
+            <div class="blog-post-footer">
+                <div class="blog-post-share">
+                    <span>Share:</span>
+                    <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-button"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-button"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="share-button"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Second Blog Post -->
+        <article class="full-blog-post" id="data-to-story">
+            <div class="blog-post-header">
+                <h1 class="blog-post-title">From Data to Story: Turning UX Research into Compelling Narratives</h1>
+                <div class="blog-post-meta">
+                    <span><i class="far fa-calendar"></i> February 27, 2025</span>
+                    <span><i class="far fa-user"></i> Julie Vera</span>
+                    <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <div class="blog-post-categories">
+                    <span class="blog-post-category">UX Research</span>
+                    <span class="blog-post-category">Storytelling</span>
+                    <span class="blog-post-category">Data Communication</span>
+                </div>
+            </div>
+            
+            <div class="blog-post-content">
+                <p>
+                    One of the biggest challenges for UX researchers isn't collecting data—it's translating that data into stories that drive organizational change. After a decade in research roles across multiple industries, I've developed a framework for transforming complex research findings into narratives that resonate with stakeholders and inspire action.
+                </p>
+                
+                <img src="https://via.placeholder.com/800x400?text=Data+Storytelling" alt="Data to story visualization">
+                
+                <h2>The storytelling gap in UX research</h2>
+                <p>
+                    When I started at Monster.com and built their first dedicated UX research function, I quickly discovered that the quality of our research mattered far less than our ability to communicate findings effectively. Rigorous methods and insightful analysis were necessary but insufficient conditions for impact. The missing ingredient was narrative.
+                </p>
+                <p>
+                    Stakeholders—especially those in leadership positions with limited time—needed more than data points. They needed stories that contextualized user needs within business realities, created emotional connections to user experiences, and provided clear paths forward. Without this translation layer, even the most valuable insights risked being ignored or misunderstood.
+                </p>
+                
+                <h2>A four-part framework for research storytelling</h2>
+                <p>
+                    Through trial and error, I developed a storytelling framework that consistently helped translate research findings into actionable narratives. This approach has four key components:
+                </p>
+                
+                <h3>1. The protagonist's journey</h3>
+                <p>
+                    Every compelling story needs a protagonist facing challenges. In UX research, your protagonists are your users. Rather than presenting aggregated data about user behaviors, frame your findings around specific user journeys. This doesn't mean focusing on individual anecdotes at the expense of patterns—it means using representative journeys to illustrate patterns you've identified across multiple users.
+                </p>
+                <p>
+                    For example, when presenting findings about job application dropoff rates at Monster, I created a composite persona based on our research and walked stakeholders through that person's actual experience, highlighting moments of frustration that correlated with our quantitative dropoff data. This approach made abstract numbers tangible and relatable.
+                </p>
+                
+                <h3>2. The tension between expectation and reality</h3>
+                <p>
+                    Effective stories create tension by highlighting the gap between what should be and what is. In UX research, this tension emerges naturally from the difference between what users expect and what they actually experience. By explicitly articulating both the user's mental model and the system's actual behavior, you create narrative tension that drives interest and motivation to resolve the discrepancy.
+                </p>
+                <p>
+                    When presenting issues with Monster's search algorithm, I first established what users expected from job searches (relevant results that matched their qualifications), then revealed how dramatically their actual experience differed. This created an immediate sense of dissonance that stakeholders wanted resolved.
+                </p>
+                
+                <h3>3. The turning point insight</h3>
+                <p>
+                    Every good story has a turning point—a moment of realization that changes how we see the situation. In UX research narratives, this is your core insight—the unexpected finding that changes how the organization understands the problem or opportunity. This isn't just your most important finding; it's specifically the finding that challenges assumptions and creates new perspective.
+                </p>
+                <p>
+                    For a Monster project on the career advice microsite, our turning point was discovering that users didn't struggle with content quality as assumed, but rather with visual presentation and information architecture. This insight completely reframed the problem and prevented a costly content rewrite.
+                </p>
+                
+                <h3>4. The resolution roadmap</h3>
+                <p>
+                    Stories need resolution, and stakeholders need clear next steps. The final component of effective research storytelling is translating insights into concrete, prioritized recommendations. This goes beyond generic suggestions to provide specific, actionable guidance that acknowledges business constraints and organizational realities.
+                </p>
+                <p>
+                    For the Monster microsite project, we provided a phased implementation plan that started with high-impact, low-effort visual changes before progressing to more substantial information architecture revisions. Each phase included specific success metrics tied to business goals.
+                </p>
+                
+                <h2>Storytelling as a collaborative process</h2>
+                <p>
+                    The most effective research stories emerge not from researchers working in isolation, but from collaborative synthesis with stakeholders. Before presenting final findings, I now hold structured story-building workshops where key stakeholders help shape the narrative. This approach not only improves the quality of the story but creates investment in the research outcome.
+                </p>
+                <p>
+                    At Monster, involving product managers and designers in crafting research narratives significantly increased implementation rates for our recommendations. When stakeholders help build the story, they become advocates rather than just audiences.
+                </p>
+                
+                <h2>Measuring narrative impact</h2>
+                <p>
+                    How do we know if our research stories are effective? Beyond tracking implementation of recommendations, I measure impact through stakeholder recall and advocacy. Can stakeholders accurately retell the core narrative weeks after presentation? Are they using the protagonists, tensions, and insights from your story in their own discussions? These indicators often predict long-term influence better than immediate reactions.
+                </p>
+                
+                <p>
+                    Transforming UX research into compelling narratives isn't about sacrificing rigor for entertainment. It's about honoring the complexity of your findings while making them accessible and motivating. When done well, research storytelling doesn't simplify—it clarifies, focusing attention on what matters most and creating the conditions for meaningful action.
+                </p>
+            </div>
+            
+            <div class="blog-post-footer">
+                <div class="blog-post-share">
+                    <span>Share:</span>
+                    <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-button"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-button"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="share-button"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Julie Vera • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Back to top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Category filtering
+            const categories = document.querySelectorAll('.blog-category');
+            const blogPosts = document.querySelectorAll('.full-blog-post');
+            
+            categories.forEach(category => {
+                category.addEventListener('click', function() {
+                    // Remove active class from all categories
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    
+                    // Add active class to clicked category
+                    this.classList.add('active');
+                    
+                    const categoryText = this.textContent.trim();
+                    
+                    if (categoryText === 'All') {
+                        // Show all posts
+                        blogPosts.forEach(post => {
+                            post.style.display = 'block';
+                        });
+                    } else {
+                        // Filter posts by category
+                        blogPosts.forEach(post => {
+                            const postCategories = Array.from(post.querySelectorAll('.blog-post-category'))
+                                .map(cat => cat.textContent.trim());
+                            
+                            if (postCategories.includes(categoryText)) {
+                                post.style.display = 'block';
+                            } else {
+                                post.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
