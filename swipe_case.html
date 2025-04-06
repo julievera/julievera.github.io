@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Vera | Case Study: Monster "Swipe to Apply"</title>
+    <meta name="description" content="UX Research case study by Julie Vera exploring user reception to a swipe-based job application paradigm.">
+    <script src="https://kit.fontawesome.com/71e8b9df83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo, an 8-bit, bright pink pixelated image of a coffee cup." height="60">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Case Study Header -->
+        <section class="case-study-header">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / 
+                <a href="index.html#feed">Portfolio</a> / 
+                <span>Case Study</span>
+            </div>
+            <div class="post-type-indicator post-type-project">UX Research Project</div>
+            <h1>Monster: "Swipe to Apply"</h1>
+            <div class="case-meta">
+                <div class="meta-item">
+                    <i class="far fa-calendar"></i>
+                    <span>Timeline: 2021</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>Team: Solo Lead</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Role: Lead UX Researcher</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Overview Section -->
+        <section class="overview-section">
+            <div class="overview-card">
+                <div class="overview-content">
+                    <h2>Overview</h2>
+                    <p>This exploratory usability study evaluated a novel "Swipe to Apply" job application paradigm that challenged traditional mental models of job seeking. The research revealed users weren't comfortable with swipe-based applying and helped prevent development of a product that didn't align with user needs. Unexpectedly, it also revealed user interest in interview preparation tools.</p>
+                </div>
+            </div>
+            <div class="overview-stats">
+                <div class="stat">
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Research Methods</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Key Insights</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Tags -->
+        <section class="project-tags">
+            <div class="tag-section">
+                <h3>Research Methods</h3>
+                <div class="tags">
+                    <span class="tag method-tag">Unmoderated Usability Testing</span>
+                    <span class="tag method-tag">Follow-up Survey</span>
+                    <span class="tag method-tag">Exploratory Research</span>
+                </div>
+            </div>
+            <div class="tag-section">
+                <h3>Tools Used</h3>
+                <div class="tags">
+                    <span class="tag tool-tag">UserTesting</span>
+                    <span class="tag tool-tag">Survey Platform</span>
+                    <span class="tag tool-tag">Prototype</span>
+                </div>
+            </div>
+            <div class="tag-section">
+                <h3>Domains</h3>
+                <div class="tags">
+                    <span class="tag domain-tag">Job Search</span>
+                    <span class="tag domain-tag">Mobile App</span>
+                    <span class="tag domain-tag">R&D</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents - Compact 2-column layout with numbering -->
+        <nav class="toc">
+            <h2>Contents</h2>
+            <div class="toc-columns">
+                <div class="toc-column">
+                    <ol>
+                        <li><a href="#background">Background</a></li>
+                        <li><a href="#objectives">Objectives</a></li>
+                        <li><a href="#approach">Methodology</a></li>
+                        <li><a href="#findings">Findings</a></li>
+                    </ol>
+                </div>
+                <div class="toc-column">
+                    <ol start="5">
+                        <li><a href="#insights">Insights</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                        <li><a href="#reflections">Reflections</a></li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Sections -->
+        <section id="background" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                <h2>Background & Context</h2>
+            </div>
+            <div class="section-content">
+                <p>"Swipe to Apply" was a product concept developed through a combination of wild brainstorming and a desire to push the boundaries of what it means to apply for a job. The initial concept was developed quickly and without user research: our app would allow users to develop a profile so that we could deliver a feed of jobs right to their fingertips. The user would then be able to swipe right to apply to that job, or swipe left to reject the job.</p>
+                
+                <div class="media-callout">
+                    <img src="images/swipe-concept.png" alt="Conceptual mockup of the Swipe to Apply interface" class="section-image">
+                    <p class="caption">Conceptual mockup of the "Swipe to Apply" interface (recreated for confidentiality)</p>
+                </div>
+                
+                <p>The product team needed to determine whether this concept was worth adding to the upcoming year's roadmap. This research was designed to evaluate user reception before investing significant development resources.</p>
+            </div>
+        </section>
+
+        <section id="objectives" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                <h2>Research Objectives</h2>
+            </div>
+            <div class="section-content">
+                <p>This research aimed to evaluate user understanding and comfort with the novel "Swipe to Apply" interaction paradigm before committing development resources.</p>
+                
+                <div class="objectives-list">
+                    <div class="objective-item">
+                        <div class="objective-number">1</div>
+                        <div class="objective-text">Determine whether users understand how this product works</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">2</div>
+                        <div class="objective-text">Assess whether users understand the meaning and implications of the swipe right/swipe left actions</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">3</div>
+                        <div class="objective-text">Identify any concerns users have about this interaction model</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">4</div>
+                        <div class="objective-text">Determine whether this project is worth putting in the PM/UX roadmap for further development</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-microscope"></i></div>
+                <h2>Approach & Methodology</h2>
+            </div>
+            <div class="section-content">
+                <p>I designed a two-part research approach consisting of unmoderated usability testing followed by a quantitative survey to evaluate user comfort with the "Swipe to Apply" concept.</p>
+                
+                <div class="methodology-cards">
+                    <div class="method-card">
+                        <div class="method-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Remote Unmoderated Usability Testing</h3>
+                        <p>Participants interacted with a functional prototype of the "Swipe to Apply" concept while thinking aloud about their experience and impressions.</p>
+                        <div class="method-details">
+                            <div class="method-stat">15+ participants</div>
+                            <div class="method-stat">Qualitative data</div>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Follow-up Survey</h3>
+                        <p>Participants completed a survey measuring their comfort with the concept and likelihood to use it, providing both quantitative metrics and qualitative feedback.</p>
+                        <div class="method-details">
+                            <div class="method-stat">All participants</div>
+                            <div class="method-stat">Mixed methods</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>While interviews and in-person usability testing would have been preferred, I opted for remote unmoderated testing due to pandemic constraints and the need for quick results to inform roadmap decisions. Participants were primarily age 18-35, currently job searching, with household incomes under $100K, representing our primary target audience.</p>
+                
+                <div class="media-callout">
+                    <img src="images/research-setup.png" alt="Research setup with participant demographics" class="section-image">
+                    <p class="caption">Participant demographic overview and research setup</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="findings" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-chart-bar"></i></div>
+                <h2>Key Findings</h2>
+            </div>
+            <div class="section-content">
+                <p>The research revealed a significant disconnect between users' understanding of the concept and their comfort level using it for job applications.</p>
+                
+                <div class="finding-card">
+                    <h3>Finding 1: Users understood the interaction but were uncomfortable using it</h3>
+                    <p>Participants immediately understood the swiping mechanism, likely due to familiarity with dating apps, but were not comfortable using this interaction for job applications. This revealed a clear distinction between understanding and acceptance.</p>
+                    <div class="quote-callout">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>I get how it works, but job applications aren't like dating. I want to really think about each application and tailor it to the company.</blockquote>
+                        <div class="quote-attribution">— Participant 4</div>
+                    </div>
+                </div>
+                
+                <div class="finding-card">
+                    <h3>Finding 2: The "swipe left = gone forever" model created anxiety</h3>
+                    <p>Participants expressed significant concern about the finality of the "swipe left" action, which would permanently remove a job from their feed. Job seekers wanted the ability to reconsider options they had previously passed on.</p>
+                    <div class="quote-callout">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>What if I accidentally swipe left on a good job? Or what if I change my mind later? I'd be really upset if I couldn't get back to it.</blockquote>
+                        <div class="quote-attribution">— Participant 9</div>
+                    </div>
+                </div>
+                
+                <div class="finding-card">
+                    <h3>Finding 3: "Instant apply" felt too rushed</h3>
+                    <p>Participants felt the "swipe right to apply" concept didn't allow for the careful consideration and customization they associate with job applications. The 2/5 average comfort rating in the follow-up survey confirmed this discomfort quantitatively.</p>
+                    <div class="media-callout">
+                        <img src="images/comfort-chart.png" alt="Chart showing user comfort levels with the Swipe to Apply concept" class="section-image">
+                        <p class="caption">Participant comfort levels with using "Swipe to Apply" for job applications averaged 2/5</p>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <h3>Finding 4: Unexpected interest in interview preparation</h3>
+                    <p>While exploring the prototype, many participants discovered placeholder text alluding to an interview preparation feature and expressed strong interest in this concept, highlighting an unmet need in our current product offerings.</p>
+                    <div class="quote-callout">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>Wait, is there an interview prep tool in here? That would be super useful! I'm always looking for ways to practice for interviews.</blockquote>
+                        <div class="quote-attribution">— Participant 12</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                <h2>Insights & Recommendations</h2>
+            </div>
+            <div class="section-content">
+                <p>Based on the findings, I developed several key insights and actionable recommendations for the product team.</p>
+                
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Respect Established Mental Models</h3>
+                        </div>
+                        <p>While innovations in interaction design can be valuable, job applications have well-established mental models that users aren't ready to abandon.</p>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul>
+                                <li>Avoid fundamentally altering the job application process itself</li>
+                                <li>Focus innovations on improving pain points within existing mental models</li>
+                                <li>Consider incorporating "save for later" options instead of permanent rejections</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Unmet Need: Interview Preparation</h3>
+                        </div>
+                        <p>The unexpected interest in interview preparation suggests a potential product opportunity that aligns better with user needs and expectations.</p>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul>
+                                <li>Explore developing an interview preparation tool</li>
+                                <li>Conduct focused research on user needs around interview practice</li>
+                                <li>Consider adapting the swiping interaction for interview prep rather than applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Salvage Useful Components</h3>
+                        </div>
+                        <p>While the overall concept wasn't viable, some elements of the design and interaction could be repurposed for other features.</p>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul>
+                                <li>Evaluate which UI components could be repurposed for other features</li>
+                                <li>Consider adapting the swiping interaction for job browsing rather than direct application</li>
+                                <li>Preserve design assets for future use in other contexts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-rocket"></i></div>
+                <h2>Impact & Outcomes</h2>
+            </div>
+            <div class="section-content">
+                <p>This research had significant strategic impact by preventing investment in a product concept that didn't align with user needs and revealing a potential new opportunity.</p>
+                
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-value">100%</div>
+                        <div class="impact-label">Development resources redirected</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-value">1</div>
+                        <div class="impact-label">New product concept discovered</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-value">2/5</div>
+                        <div class="impact-label">User comfort with concept</div>
+                    </div>
+                </div>
+                
+                <div class="media-callout">
+                    <img src="images/impact-visualization.png" alt="Visualization of research impact on product roadmap" class="section-image">
+                    <p class="caption">Research impact on product decisions and resource allocation</p>
+                </div>
+                
+                <p>Strategic impacts included:</p>
+                <ul>
+                    <li><strong>Product roadmap pivot:</strong> The team declared the "Swipe to Apply" concept effectively dead based on user feedback</li>
+                    <li><strong>Stakeholder alignment:</strong> This project established a precedent for testing brainstormed ideas before adding them to the roadmap</li>
+                    <li><strong>New opportunity:</strong> The unexpected discovery of user interest in interview preparation led to new research in this area</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="reflections" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-brain"></i></div>
+                <h2>Reflections</h2>
+            </div>
+            <div class="section-content">
+                <p>This project offered valuable lessons in testing novel interaction paradigms and being open to unexpected research outcomes.</p>
+                
+                <div class="reflections-grid">
+                    <div class="reflection-card">
+                        <h3>What Went Well</h3>
+                        <ul>
+                            <li>Early testing prevented wasted development resources</li>
+                            <li>Unmoderated testing provided efficient feedback despite pandemic constraints</li>
+                            <li>The exploratory approach allowed for unexpected discovery of the interview prep opportunity</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reflection-card">
+                        <h3>Challenges</h3>
+                        <ul>
+                            <li>Designing test protocols for a completely new interaction paradigm</li>
+                            <li>Communicating negative findings to stakeholders invested in the concept</li>
+                            <li>Balancing quick feedback needs with research rigor</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reflection-card">
+                        <h3>Lessons Learned</h3>
+                        <ul>
+                            <li>Always allow users to explore during usability tests—unexpected insights may emerge</li>
+                            <li>Testing before development saves resources and enables better product decisions</li>
+                            <li>Be proactive about investigating R&D projects to prepare the right research infrastructure</li>
+                            <li>Familiar interactions from one domain may not transfer well to another despite apparent similarities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Next Case Study Teaser -->
+    <section class="next-case-study">
+        <div class="container">
+            <div class="next-case-header">
+                <div class="next-label">Next Case Study</div>
+                <div class="next-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="next-case-content">
+                <h2>Monster Career Advice Microsite</h2>
+                <p>Uncovering the true causes of increasing bounce rates on Monster.com's career advice section.</p>
+                <a href="monster-career-advice-case-study.html" class="next-case-link">View Case Study</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo" height="40">
+                    <p>&copy; 2025 Julie Vera • All Rights Reserved</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="mailto:jvera@uw.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/julievera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://linktr.ee/julievera" target="_blank"><i class="fas fa-tree"></i></a>
+                        <a href="https://bsky.app/profile/julievera.com" target="_blank"><i class="fas fa-cloud"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add active class to current section in TOC
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.content-section');
+            const tocLinks = document.querySelectorAll('.toc a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(pageYOffset >= (sectionTop - 300)) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
