@@ -722,6 +722,17 @@ footer {
     background-color: var(--primary);
 }
 
+/* Fix for quote z-index issue */
+        .quote-callout {
+            position: relative;
+            z-index: 1; /* Lower z-index than the TOC */
+        }
+        
+        .toc {
+            position: relative;
+            z-index: 2; /* Higher z-index than quote elements */
+        }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .case-study-header h1 {
