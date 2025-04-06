@@ -382,6 +382,11 @@
             color: #388e3c;
         }
 
+        .post-type-media {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
         /* Publication Specific Styles */
         .publication-details {
             background-color: #f9f9f9;
