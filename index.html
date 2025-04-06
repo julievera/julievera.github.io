@@ -11,7 +11,7 @@
     <style>
         /* Base Styles */
         :root {
-            --primary: #6200ee;
+            --primary: #FF00A8;
             --primary-dark: #734172;
             --secondary: #5F9D3F;
             --background: #f5f5f5;
@@ -1189,10 +1189,10 @@
                         if (countEl) {
                             const newCount = parseInt(countEl[0]) + 1;
                             this.innerHTML = this.innerHTML.replace(/\d+/, newCount);
-                            this.style.color = '#6200ee';
+                            this.style.color = '#FF00A8';
                         }
                     } else if (this.innerHTML.includes('fa-bookmark')) {
-                        this.style.color = '#6200ee';
+                        this.style.color = '#FF00A8';
                         this.innerHTML = this.innerHTML.replace('Save', 'Saved');
                     }
                 });
@@ -1213,13 +1213,13 @@
                     
                     // Highlight the clicked icon
                     navIcons.forEach(i => i.style.color = '');
-                    this.style.color = '#6200ee';
+                    this.style.color = '#FF00A8';
                 });
             });
             
             // Set the first icon as active by default
             if (navIcons.length > 0) {
-                navIcons[0].style.color = '#6200ee';
+                navIcons[0].style.color = '#FF00A8';
             }
         });
     </script>
