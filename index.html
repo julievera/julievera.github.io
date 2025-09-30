@@ -15,7 +15,7 @@
     <header>
         <div class="header-content container">
             <div class="logo-container">
-            <img src="images/coffeelogo.png" alt="Julie Vera's logo, an 8-bit, bright pink pixelated image of a coffee cup." height="120">
+                <img src="images/coffeelogo.png" alt="Julie Vera's logo, an 8-bit, bright pink pixelated image of a coffee cup." height="120">
             </div>
         </div>
     </header>
@@ -23,13 +23,13 @@
     <main class="container">
         <section class="profile-section">
             <div class="profile-pic">
-                <img src="/images/profile_zoom.png"/>
+                <img src="/images/profile_zoom.png" alt="Julie Vera"/>
             </div>
             <div class="profile-info">
                 <h1>Julie A. Vera, M.A., M.S.</h1>
                 <h4>Lead UX Researcher | PhD Candidate (ABD) in Human Centered Design & Engineering</h4>
                 <p></p>
-                <p><i class="fas fa-map-marker-alt"></i> <b>Seattle, NYC, & Remote</p></b>
+                <p><i class="fas fa-map-marker-alt"></i> <b>Seattle, NYC, & Remote</b></p>
                 <p><i class="fa-solid fa-lines-leaning"></i><b> Domain Expertise</b>: social media, crisis informatics, sensemaking, misinformation operations, platform logics, AI chatbots, recommender system evaluation </p>
                 <p><i class="fa-solid fa-flask-vial"></i><b> Mixed Methods</b>: In-depth interviews, computational social science (NLP, text analytics), usability testing, survey design, contextual inquiry, analytical framework development</p> 
                 
@@ -51,485 +51,464 @@
         </section>
 
         <div class="tabs">
-            <div class="tab active" data-tab="feed">Portfolio</div>
+            <div class="tab active" data-tab="all">All</div>
+            <div class="tab" data-tab="publications">Publications</div>
+            <div class="tab" data-tab="projects">Projects</div>
+            <div class="tab" data-tab="media">Media</div>
             <div class="tab" data-tab="blog">Blog</div>
             <div class="tab" data-tab="about">About</div>
             <div class="tab" data-tab="contact">Contact</div>
         </div>
 
-            
-            <!-- Portfolio Feed Tab -->
-        <div class="tab-content active" id="feed">
-        <!-- Filter Section - NOW INSIDE THE PORTFOLIO TAB -->
-        <div class="filter-section">
-            <div class="filter-title">
-                <i class="fas fa-filter"></i> Filter Feed
-            </div>
-            <div class="filter-options">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="publication">Publications</button>
-                <button class="filter-btn" data-filter="project">UXR Projects</button>
-                <button class="filter-btn" data-filter="DRG">Research Groups</button>
-                <button class="filter-btn" data-filter="media">Media</button>
-            </div>
-            <div class="filter-tags">
-                <div class="filter-tag-title">Popular Tags:</div>
-                <span class="filter-tag" data-tag="TikTok">#TikTok</span>
-                <span class="filter-tag" data-tag="Crisis">#Crisis</span>
-                <span class="filter-tag" data-tag="Sensemaking">#Sensemaking</span>
-                <span class="filter-tag" data-tag="UXResearch">#UXR</span>
+        <!-- ALL TAB -->
+        <div class="tab-content active" id="all">
+            <div class="feed">
+                <!-- Workshop Paper Post -->
+                <div class="post post-publication">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-publication">Publication</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">For <a href="https://sites.google.com/view/newsfutures/home" target="_blank">News Futures Workshop</a> at CHI Conference '25 • April 26, 2025</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Weatherfluencers</h2>
+                        <div class="publication-details">
+                            <div class="publication-authors">Julie A. Vera</div>
+                            <div class="publication-citation">
+                                For News Futures Workshop at CHI Conference on Human Factors in Computing Systems (CHI '25), April 26-May 1, 2025, Yokohama, Japan. ACM, New York, NY, USA, 7 pages.
+                            </div>
+                            <div class="publication-doi">
+                                <i class="fas fa-link"></i> [TBD-arxiv]
+                            </div>
+                        </div>
+                        <p class="post-text">
+                            As digital platforms reshape the time-sensitive news information consumption landscape, novel intermediaries have emerged to interpret complex data for public audiences. Weather livestreamers represent a compelling example of this transformation in weather news coverage. Through their real-time interpretation of radar data, these creators cultivate substantial followings by translating official National Weather Service data, radar imagery, and weather alerts into accessible formats while building audience rapport.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#CHI2025</span>
+                            <span class="post-tag">#Weatherfluencers</span>
+                            <span class="post-tag">#CrisisInformatics</span>
+                            <span class="post-tag">#Newsfluencers</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 107
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 124
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-file-pdf"></i> <a href="/pdf/weatherfluencers.pdf" target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UXR PROJECT - MICROSITE -->
+                <div class="post post-project">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-project">UXR Project</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">Principal Investigator • Job Seekers</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Case Study: Monster Career Advice Microsite</h2>
+                        <p class="post-text">
+                            The Monster.com career advice microsite had been experiencing a steadily increasing bounce rate. Through targeted research studies, I discovered the issue wasn't with content quality as initially assumed, but rather with the visual design and information architecture, preventing a costly content rewrite and leading to data-driven redesign recommendations.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#UXResearch</span>
+                            <span class="post-tag">#Monster</span>
+                            <span class="post-tag">#Employment</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 73
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 37
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="/microsite_case.html">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Post - UNWANTED CONTENT -->
+                <div class="post post-publication">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-publication">Publication</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">Published in CHI Conference '25 • April 2025</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">"They've Over-Emphasized That One Search": Controlling Unwanted Content on TikTok's For You Page</h2>
+                        <div class="publication-details">
+                            <div class="publication-authors">Julie A. Vera and Sourojit Ghosh</div>
+                            <div class="publication-citation">
+                                In CHI Conference on Human Factors in Computing Systems (CHI '25), April 26-May 1, 2025, Yokohama, Japan. ACM, New York, NY, USA, 8 pages.
+                            </div>
+                            <div class="publication-doi">
+                                <i class="fas fa-link"></i> https://doi.org/10.1145/3706598.3713666
+                            </div>
+                        </div>
+                        <p class="post-text">
+                            This paper examines how TikTok users develop strategies to control and manage unwanted content on their "For You" pages. Through interviews with 24 participants, we reveal folk theories about TikTok's recommendation algorithm and document both the successful and unsuccessful strategies users employ to shape their content feeds.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#CHI2025</span>
+                            <span class="post-tag">#TikTok</span>
+                            <span class="post-tag">#AlgorithmicCuration</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 87
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 14
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UXR PROJECT - SEARCH RESULTS -->
+                <div class="post post-project">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-project">UXR Project</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">Principal Investigator • Job Seekers</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Case Study: Monster Job Search Result Algorithm Optimization</h2>
+                        <p class="post-text">
+                           This research project evaluated the perceived quality of job search results on Monster/Jobs.com and identified factors that impact user satisfaction. The findings led to algorithm optimization that improved search result weighting and significantly enhanced the user experience across multiple markets.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#UXResearch</span>
+                            <span class="post-tag">#Algorithms</span>
+                            <span class="post-tag">#JobSeekers</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 44
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 102
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="/algorithm_case.html">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUBLICATION - TECH COMM -->
+                <div class="post post-publication">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-publication">Publication</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">Technical Communication • 2024</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">How-To in Short-Form: A Framework for Analyzing Short-Format Instructional Content on TikTok</h2>
+                        <div class="publication-details">
+                            <div class="publication-authors">Julie A. Vera, D.W. McDonald, M. Zachry</div>
+                            <div class="publication-citation">
+                                Vera, Julie A., David W. McDonald, and Mark Zachry. "How-To in Short-Form: A Framework for Analyzing Short-Format Instructional Content on TikTok." Technical Communication 71.2 (2024): 5-25.
+                            </div>
+                            <div class="publication-doi">
+                                <i class="fas fa-link"></i> https://doi.org/10.55177/tc152088
+                            </div>
+                        </div>
+                        <p class="post-text">
+                            This project outlines a framework for assessing the video production qualities of instructional content across TikTok. After analyzing instructional content and comparing existing frameworks, we developed new dimensions for short-format video including tempo and level of detail, which describe the pacing of the video from a temporal perspective and the fidelity of instruction.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#TechnicalCommunication</span>
+                            <span class="post-tag">#TikTok</span>
+                            <span class="post-tag">#Multimodal</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 210
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 27
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="https://www.ingentaconnect.com/contentone/stc/tc/2024/00000071/00000002/art00003" target="_blank">View Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UXR PROJECT - SWIPE CASE STUDY -->
+                <div class="post post-project">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-project">UXR Project</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">Principal Investigator • Job Seekers</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Case Study: Monster "Swipe to Apply"</h2>
+                        <p class="post-text">
+                            This exploratory usability study evaluated a novel "Swipe to Apply" job application paradigm that challenged traditional mental models of job seeking. The research revealed users weren't comfortable with swipe-based applying and helped prevent development of a product that didn't align with user needs. Unexpectedly, it also revealed user interest in interview preparation tools.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#UXResearch</span>
+                            <span class="post-tag">#Monster</span>
+                            <span class="post-tag">#JobSeekers</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 53
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 17
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="/swipe_case.html">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Post -->
+                <div class="post post-media">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-media">Media</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">University of Washington • December 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Facts, Frames, and (Mis)interpretations: Understanding Rumors as Collective Sensemaking</h2>
+                        <p class="post-text">
+                            Featured in this Center for an Informed Public publication about how social media users collectively make sense of ambiguous information during crisis events. The research explores rumor propagation patterns and identifies how framing and interpretative contexts shape the way misinformation evolves within online communities.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#Misinformation</span>
+                            <span class="post-tag">#CrisisCommunication</span>
+                            <span class="post-tag">#SocialMedia</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 63
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 21
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="https://www.cip.uw.edu/2023/12/06/rumors-collective-sensemaking-kate-starbird/" target="_blank">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presentation/Webinar Post -->
+                <div class="post post-media">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-media">Presentation</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">Boston Product Management Association • May 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Know Your User: Design Methods & Frameworks to Use Every Day</h2>
+                        <p class="post-text">
+                            Delivered a practical workshop sharing UX research methods and frameworks that product managers can implement in their daily workflows. This presentation covered approaches to better understand user needs, prioritize features based on evidence, and integrate user insights into product development cycles.
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#UXMethods</span>
+                            <span class="post-tag">#ProductManagement</span>
+                            <span class="post-tag">#Workshop</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 78
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 32
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-video"></i> <a href="#" target="_blank">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Posts in All Feed -->
+                <div class="post post-blog">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-blog">Blog</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">March 30, 2025</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Privatization Concerns: The NOAA Crisis and Its Impact on Weather Information</h2>
+                        <p class="post-text">
+                            Recent developments have made the role of weatherfluencers even more critical. In February 2025, the Trump administration, through its Department of Government Efficiency (DOGE), initiated massive cuts at the National Oceanic and Atmospheric Administration (NOAA) and National Weather Service (NWS)...
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#CrisisCommunication</span>
+                            <span class="post-tag">#SocialMedia</span>
+                            <span class="post-tag">#NOAA</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 45
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 12
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="blog.html#privatization">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post post-blog">
+                    <div class="post-header">
+                        <div class="post-avatar">JV</div>
+                        <div class="post-user">
+                            <div class="post-username">
+                                <span class="post-type-indicator post-type-blog">Blog</span>
+                                Julie Vera
+                            </div>
+                            <div class="post-meta">February 27, 2025</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Weatherfluencers: How Storm Livestreamers Are Reshaping Crisis Communication</h2>
+                        <p class="post-text">
+                            In recent years, a new breed of digital content creators has emerged on platforms like YouTube and TikTok: "weatherfluencers." These dedicated livestreamers provide real-time interpretation of severe weather events, translating complex meteorological data into accessible information...
+                        </p>
+                        <div class="post-tags">
+                            <span class="post-tag">#Weather</span>
+                            <span class="post-tag">#Weatherfluencers</span>
+                            <span class="post-tag">#Crisis</span>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action">
+                            <i class="far fa-thumbs-up"></i> 89
+                        </div>
+                        <div class="post-action">
+                            <i class="far fa-comment"></i> 24
+                        </div>
+                        <div class="post-action">
+                            <i class="fas fa-external-link-alt"></i> <a href="blog.html#weatherfluencers">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    <!-- FEED BEGINS HERE -->
-    <div class="feed">
-        <!-- Workshop Paper Post -->
-        <div class="post post-publication">
-            <div class="post-header">
-                <div class="post-avatar">JV</div>
-                <div class="post-user">
-                    <div class="post-username">
-                        <span class="post-type-indicator post-type-publication">Publications</span>
-                        Julie Vera
-                    </div>
-                    <div class="post-meta">For <a href="https://sites.google.com/view/newsfutures/home" target="_blank">News Futures Workshop</a> at CHI Conference '25 • April 26, 2025</div>
-                </div>
-                <div class="post-more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-content">
-                <h2 class="post-title">Weatherfluencers</h2>
-                <div class="publication-details">
-                    <div class="publication-authors">Julie A. Vera</div>
-                    <div class="publication-citation">
-                        For News Futures Workshop at CHI Conference on Human Factors in Computing Systems (CHI '25), April 26-May 1, 2025, Yokohama, Japan. ACM, New York, NY, USA, 7 pages.
-                    </div>
-                    <div class="publication-doi">
-                        <i class="fas fa-link"></i> [TBD-arxiv]
-                    </div>
-                </div>
-                <p class="post-text">
-                    As digital platforms reshape the time-sensitive news information
-                    consumption landscape, novel intermediaries have emerged to interpret complex data for public audiences. Weather livestreamers
-                    represent a compelling example of this transformation in weather
-                    news coverage. Through their real-time interpretation of radar data,
-                    these creators cultivate substantial followings by translating official
-                    National Weather Service data, radar imagery, and weather alerts
-                    into accessible formats while building audience rapport. This pa-
-                    per introduces the concept of weatherfluencers as a distinct subset
-                    of newsfluencers and examines their roles, practices, and obligations to their communities and the broader public. We explore
-                    how their activities illuminate key challenges and opportunities in
-                    designing platforms that support real-time collaboration around
-                    weather events. Additionally, we contextualize these developments
-                    within broader policy shifts, including proposals to reduce National
-                    Weather Service funding and privatize weather operations. This
-                    potential privatization creates urgent questions for HCI researchers
-                    about how to design platforms and systems that support critical
-                    weather information dissemination in an increasingly fragmented
-                    landscape. This research agenda underscores the importance of understanding weather information intermediaries as crucial actors
-                    in the evolving landscape of news creation, particularly as we face
-                    potential changes in institutional weather services.
-                </p>
-                <!-- <img src="https://via.placeholder.com/800x400?text=TikTok+User+Control+Research" alt="Weatherfluencer research visualization" class="post-image"> -->
-                <div class="post-tags">
-                    <span class="post-tag">#CHI2025</span>
-                    <span class="post-tag">#Weatherfluencers</span>
-                    <span class="post-tag">#CrisisInformatics</span>
-                    <span class="post-tag">#Newsfluencers</span>
-                    <span class="post-tag">#Sensemaking</span>
-                </div>
-            </div>
-            <div class="post-actions">
-                <div class="post-action">
-                    <i class="far fa-thumbs-up"></i> 107
-                </div>
-                <div class="post-action">
-                    <i class="far fa-comment"></i> 124
-                </div>
-                <div class="post-action">
-                    <i class="far fa-bookmark"></i> Save
-                </div>
-                <div class="post-action">
-                    <i class="fas fa-file-pdf"></i> <a href="/pdf/weatherfluencers.pdf" target="_none">PDF</a>
-                </div>
+
+        <!-- PUBLICATIONS TAB -->
+        <div class="tab-content" id="publications">
+            <div class="feed">
+                <!-- Same publication posts from above -->
             </div>
         </div>
+
+        <!-- PROJECTS TAB -->
+        <div class="tab-content" id="projects">
+            <div class="feed">
+                <!-- Same project posts from above -->
+            </div>
+        </div>
+
+        <!-- MEDIA TAB -->
+        <div class="tab-content" id="media">
+            <div class="feed">
+                <!-- Same media posts from above -->
+            </div>
+        </div>
+
+        <!-- BLOG TAB -->
+        <div class="tab-content" id="blog">
+            <div class="blog-post">
+                <h2 class="blog-title">Privatization Concerns: The NOAA Crisis and Its Impact on Weather Information</h2>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> March 30, 2025</span>
+                    <span><i class="fas fa-tag"></i> Crisis Communication, Social Media</span>
+                </div>
+                <div class="blog-content">
+                    <p>
+                        Recent developments have made the role of weatherfluencers even more critical. In February 2025, the Trump administration, through its Department of Government Efficiency (DOGE), initiated massive cuts at the National Oceanic and Atmospheric Administration (NOAA) and National Weather Service (NWS) - firing approximately 800-880 employees including meteorologists, hydrologists, technicians, and scientists who build and maintain weather models.
+                    </p>
+                    <p>
+                        <a href="blog.html#privatization">Read full article →</a>
+                    </p>
+                </div>
+            </div>
         
-        <!-- UXR PROJECT - MICROSITE -->
-        <div class="post post-project">
-            <div class="post-header">
-                <div class="post-avatar">JV</div>
-                <div class="post-user">
-                    <div class="post-username">
-                        <span class="post-type-indicator post-type-project">UXR Project</span>
-                        Julie Vera
-                    </div>
-                    <div class="post-meta">Principal Investigator • Job Seekers</div>
+            <div class="blog-post">
+                <h2 class="blog-title">Weatherfluencers: How Storm Livestreamers Are Reshaping Crisis Communication in the Digital Age</h2>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> February 27, 2025</span>
+                    <span><i class="fas fa-tag"></i> Weather, Weatherfluencers, Critical Services</span>
                 </div>
-                <div class="post-more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-content">
-                <h2 class="post-title">Case Study: Monster Career Advice Microsite</h2>
-                <p class="post-text">
-                    The Monster.com career advice microsite had been experiencing a steadily increasing bounce rate. Through targeted research studies, I discovered the issue wasn't with content quality as initially assumed, but rather with the visual design and information architecture, preventing a costly content rewrite and leading to data-driven redesign recommendations.
-                </p>
-                <img src="https://via.placeholder.com/800x400?text=Crisis+Information+Research" alt="Monster Microsite Banner" class="post-image">
-                <div class="post-tags">
-                    <span class="post-tag">#UXResearch</span>
-                    <span class="post-tag">#Monster</span>
-                    <span class="post-tag">#Employment</span>
-                    <span class="post-tag">#JobSeekers</span>
-                    <span class="post-tag">#Microsite</span>
-                </div>
-            </div>
-            <div class="post-actions">
-                <div class="post-action">
-                    <i class="far fa-thumbs-up"></i> 73
-                </div>
-                <div class="post-action">
-                    <i class="far fa-comment"></i> 37
-                </div>
-                <div class="post-action">
-                    <i class="far fa-bookmark"></i> Save
-                </div>
-                <div class="post-action">
-                    <i class="fas fa-external-link-alt"></i> <a href="/microsite_case.html">View Project</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Publication Post - UNWANTED CONTENT -->
-        <div class="post post-publication">
-            <div class="post-header">
-                <div class="post-avatar">JV</div>
-                <div class="post-user">
-                    <div class="post-username">
-                        <span class="post-type-indicator post-type-publication">Publication</span>
-                        Julie Vera
-                    </div>
-                    <div class="post-meta">Published in CHI Conference '25 • April 2025</div>
-                </div>
-                <div class="post-more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-content">
-                <h2 class="post-title">"They've Over-Emphasized That One Search": Controlling Unwanted Content on TikTok's For You Page</h2>
-                <div class="publication-details">
-                    <div class="publication-authors">Julie A. Vera and Sourojit Ghosh</div>
-                    <div class="publication-citation">
-                        In CHI Conference on Human Factors in Computing Systems (CHI '25), April 26-May 1, 2025, Yokohama, Japan. ACM, New York, NY, USA, 8 pages.
-                    </div>
-                    <div class="publication-doi">
-                        <i class="fas fa-link"></i> https://doi.org/10.1145/3706598.3713666
-                    </div>
-                </div>
-                <p class="post-text">
-                    This paper examines how TikTok users develop strategies to control and manage unwanted content on their "For You" pages. Through interviews with 24 participants, we reveal folk theories about TikTok's recommendation algorithm and document both the successful and unsuccessful strategies users employ to shape their content feeds.
-                </p>
-                <img src="https://via.placeholder.com/800x400?text=TikTok+User+Control+Research" alt="TikTok research visualization" class="post-image">
-                <div class="post-tags">
-                    <span class="post-tag">#CHI2025</span>
-                    <span class="post-tag">#TikTok</span>
-                    <span class="post-tag">#AlgorithmicCuration</span>
-                    <span class="post-tag">#UserControl</span>
-                    <span class="post-tag">#Sensemaking</span>
-                </div>
-            </div>
-            <div class="post-actions">
-                <div class="post-action">
-                    <i class="far fa-thumbs-up"></i> 87
-                </div>
-                <div class="post-action">
-                    <i class="far fa-comment"></i> 14
-                </div>
-                <div class="post-action">
-                    <i class="far fa-bookmark"></i> Save
-                </div>
-                <div class="post-action">
-                    <i class="fas fa-file-pdf"></i> PDF
+                <div class="blog-content">
+                    <p>
+                        In recent years, a new breed of digital content creators has emerged on platforms like YouTube and TikTok: "weatherfluencers." These dedicated livestreamers provide real-time interpretation of severe weather events, translating complex meteorological data into accessible information for their growing audiences.
+                    </p>
+                    <p>
+                        <a href="blog.html#weatherfluencers">Read full article →</a>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- UXR PROJECT - SEARCH RESULTS -->
-        <div class="post post-project">
-            <div class="post-header">
-                <div class="post-avatar">JV</div>
-                <div class="post-user">
-                    <div class="post-username">
-                        <span class="post-type-indicator post-type-project">UXR Project</span>
-                        Julie Vera
-                    </div>
-                    <div class="post-meta">Principal Investigator • Job Seekers</div>
-                </div>
-                <div class="post-more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-content">
-                <h2 class="post-title">Case Study: Monster Job Search Result Algorithm Optimization</h2>
-                <p class="post-text">
-                   This research project evaluated the perceived quality of job search results on Monster/Jobs.com and identified factors that impact user satisfaction. The findings led to algorithm optimization that improved search result weighting and significantly enhanced the user experience across multiple markets.
-                </p>
-                <img src="https://via.placeholder.com/800x400?text=Crisis+Information+Research" alt="Monster Microsite Banner" class="post-image">
-                <div class="post-tags">
-                    <span class="post-tag">#UXResearch</span>
-                    <span class="post-tag">#Algorithms</span>
-                    <span class="post-tag">#Employment</span>
-                    <span class="post-tag">#JobSeekers</span>
-                    <span class="post-tag">#SearchResults</span>
-                </div>
-            </div>
-            <div class="post-actions">
-                <div class="post-action">
-                    <i class="far fa-thumbs-up"></i> 44
-                </div>
-                <div class="post-action">
-                    <i class="far fa-comment"></i> 102
-                </div>
-                <div class="post-action">
-                    <i class="far fa-bookmark"></i> Save
-                </div>
-                <div class="post-action">
-                    <i class="fas fa-external-link-alt"></i> <a href="/algorithm_case.html">View Project</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- PUBLICATION - TECH COMM -->
-        <div class="post post-publication">
-            <div class="post-header">
-                <div class="post-avatar">JV</div>
-                <div class="post-user">
-                    <div class="post-username">
-                        <span class="post-type-indicator post-type-publication">Publications</span>
-                        Julie Vera
-                    </div>
-                    <div class="post-meta">For <a href="https://sites.google.com/view/newsfutures/home" target="_blank">News Futures Workshop</a> at CHI Conference '25 • April 26, 2025</div>
-                </div>
-                <div class="post-more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-content">
-                <h2 class="post-title">How-To in Short-Form: A Framework for Analyzing Short-Format Instructional Content on TikTok</h2>
-                <div class="publication-details">
-                    <div class="publication-authors">Julie A. Vera, D.W. McDonald, M. Zachry</div>
-                    <div class="publication-citation">
-                        Vera, Julie A., David W. McDonald, and Mark Zachry. "How-To in Short-Form: A Framework for Analyzing Short-Format Instructional Content on TikTok." Technical Communication 71.2 (2024): 5-25.
-                    </div>
-                    <div class="publication-doi">
-                        <i class="fas fa-link"></i> https://doi.org/10.55177/tc152088
-                    </div>
-                </div>
-                <p class="post-text">
-                    Purpose: TikTok’s rise in popularity has invited creators across a broad spectrum of interests to contribute content to the platform, including non-expert, instructional subject matter. Previously, technical communication scholars have described ways to assess video instruction online, in relatively long-format lengths. Our project outlines a framework for assessing the video production qualities of instructional content across TikTok.
-
-                    Method: We performed a content analysis of existing frameworks and sets of heuristics for assessing long-format instructional videos. We then analyzed a set of instructional content found across the TikTok platform and analyzed them using previous frameworks. After comparing and contrasting, we developed a new framework for assessing short-format video instructional content.
-
-                    Results: After assessing long-format instructional video frameworks and instructional content found across TikTok, we found that many dimensions and heuristics from previous frameworks applied to short-format video. Unique to short-form video were the dimensions of tempo and level of detail, which describe the pacing of the video from a temporal perspective and the fidelity of instruction, respectively. Instruction on TikTok can take place without explicit step-by-step instruction.
-                </p>
-                <!-- <img src="https://via.placeholder.com/800x400?text=TikTok+User+Control+Research" alt="Weatherfluencer research visualization" class="post-image"> -->
-                <div class="post-tags">
-                    <span class="post-tag">#TechnicalCommunication</span>
-                    <span class="post-tag">#short-form video</span>
-                    <span class="post-tag">#tiktok</span>
-                    <span class="post-tag">#multimodal</span>
-                    <span class="post-tag">#learning</span>
-                </div>
-            </div>
-            <div class="post-actions">
-                <div class="post-action">
-                    <i class="far fa-thumbs-up"></i> 210
-                </div>
-                <div class="post-action">
-                    <i class="far fa-comment"></i> 27
-                </div>
-                <div class="post-action">
-                    <i class="far fa-bookmark"></i> Save
-                </div>
-                <div class="post-action">
-                    <i class="fas fa-external-link-alt"></i> <a href="https://www.ingentaconnect.com/contentone/stc/tc/2024/00000071/00000002/art00003">View Study</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- UXR PROJECT - SWIPE CASE STUDY -->
-        <div class="post post-project">
-            <div class="post-header">
-                <div class="post-avatar">JV</div>
-                <div class="post-user">
-                    <div class="post-username">
-                        <span class="post-type-indicator post-type-project">UXR Project</span>
-                        Julie Vera
-                    </div>
-                    <div class="post-meta">Principal Investigator • Job Seekers</div>
-                </div>
-                <div class="post-more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-content">
-                <h2 class="post-title">Case Study: Monster "Swipe to Apply"</h2>
-                <p class="post-text">
-                    This exploratory usability study evaluated a novel "Swipe to Apply" job application paradigm that challenged traditional mental models of job seeking. The research revealed users weren't comfortable with swipe-based applying and helped prevent development of a product that didn't align with user needs. Unexpectedly, it also revealed user interest in interview preparation tools.
-                </p>
-                <img src="https://via.placeholder.com/800x400?text=Crisis+Information+Research" alt="Crisis information on TikTok research" class="post-image">
-                <div class="post-tags">
-                    <span class="post-tag">#UXResearch</span>
-                    <span class="post-tag">#Monster</span>
-                    <span class="post-tag">#Employment</span>
-                    <span class="post-tag">#JobSeekers</span>
-                    <span class="post-tag">#Apps</span>
-                </div>
-            </div>
-            <div class="post-actions">
-                <div class="post-action">
-                    <i class="far fa-thumbs-up"></i> 53
-                </div>
-                <div class="post-action">
-                    <i class="far fa-comment"></i> 17
-                </div>
-                <div class="post-action">
-                    <i class="far fa-bookmark"></i> Save
-                </div>
-                <div class="post-action">
-                    <i class="fas fa-external-link-alt"></i> <a href="/swipe_case.html">View Project</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Media Post -->
-<div class="post post-media">
-    <div class="post-header">
-        <div class="post-avatar">JV</div>
-        <div class="post-user">
-            <div class="post-username">
-                <span class="post-type-indicator post-type-media">Media</span>
-                Julie Vera
-            </div>
-            <div class="post-meta">University of Washington • December 2023</div>
-        </div>
-        <div class="post-more">
-            <i class="fas fa-ellipsis-h"></i>
-        </div>
-    </div>
-    <div class="post-content">
-        <h2 class="post-title">Facts, Frames, and (Mis)interpretations: Understanding Rumors as Collective Sensemaking</h2>
-        <p class="post-text">
-            Featured in this Center for an Informed Public publication about how social media users collectively make sense of ambiguous information during crisis events. The research explores rumor propagation patterns and identifies how framing and interpretative contexts shape the way misinformation evolves within online communities.
-        </p>
-        <img src="https://via.placeholder.com/800x400?text=Rumor+Research" alt="Rumors as collective sensemaking" class="post-image">
-        <div class="post-tags">
-            <span class="post-tag">#Misinformation</span>
-            <span class="post-tag">#CrisisCommunication</span>
-            <span class="post-tag">#SocialMedia</span>
-            <span class="post-tag">#CollectiveSensemaking</span>
-        </div>
-    </div>
-    <div class="post-actions">
-        <div class="post-action">
-            <i class="far fa-thumbs-up"></i> 63
-        </div>
-        <div class="post-action">
-            <i class="far fa-comment"></i> 21
-        </div>
-        <div class="post-action">
-            <i class="far fa-bookmark"></i> Save
-        </div>
-        <div class="post-action">
-            <i class="fas fa-external-link-alt"></i> <a href="https://www.cip.uw.edu/2023/12/06/rumors-collective-sensemaking-kate-starbird/" target="_blank">Read Article</a>
-        </div>
-    </div>
-</div>
-
-<!-- Presentation/Webinar Post -->
-<div class="post post-media">
-    <div class="post-header">
-        <div class="post-avatar">JV</div>
-        <div class="post-user">
-            <div class="post-username">
-                <span class="post-type-indicator post-type-media">Presentation</span>
-                Julie Vera
-            </div>
-            <div class="post-meta">Boston Product Management Association • May 2023</div>
-        </div>
-        <div class="post-more">
-            <i class="fas fa-ellipsis-h"></i>
-        </div>
-    </div>
-    <div class="post-content">
-        <h2 class="post-title">Know Your User: Design Methods & Frameworks to Use Every Day</h2>
-        <p class="post-text">
-            Delivered a practical workshop sharing UX research methods and frameworks that product managers can implement in their daily workflows. This presentation covered approaches to better understand user needs, prioritize features based on evidence, and integrate user insights into product development cycles.
-        </p>
-        <img src="https://via.placeholder.com/800x400?text=UX+Methods+Presentation" alt="Design Methods and Frameworks presentation" class="post-image">
-        <div class="post-tags">
-            <span class="post-tag">#UXMethods</span>
-            <span class="post-tag">#ProductManagement</span>
-            <span class="post-tag">#Workshop</span>
-            <span class="post-tag">#UserResearch</span>
-        </div>
-    </div>
-    <div class="post-actions">
-        <div class="post-action">
-            <i class="far fa-thumbs-up"></i> 78
-        </div>
-        <div class="post-action">
-            <i class="far fa-comment"></i> 32
-        </div>
-        <div class="post-action">
-            <i class="far fa-bookmark"></i> Save
-        </div>
-        <div class="post-action">
-            <i class="fas fa-video"></i> <a href="#" target="_blank">Watch Video</a>
-        </div>
-    </div>
-</div>        
-    </div>
-</div>
-
-               
-
-        <!-- Blog Tab -->
-            <div class="tab-content" id="blog">
-                <div class="blog-post">
-                    <h2 class="blog-title">Privatization Concerns: The NOAA Crisis and Its Impact on Weather Information</h2>
-                    <div class="blog-meta">
-                        <span><i class="far fa-calendar"></i> March 30, 2025</span>
-                        <span><i class="fas fa-tag"></i> Crisis Communication, Social Media</span>
-                    </div>
-                    <div class="blog-content">
-                        <p>
-                            Recent developments have made the role of weatherfluencers even more critical. In February 2025, the Trump administration, through its Department of Government Efficiency (DOGE), initiated massive cuts at the National Oceanic and Atmospheric Administration (NOAA) and National Weather Service (NWS) - firing approximately 800-880 employees including meteorologists, hydrologists, technicians, and scientists who build and maintain weather models.
-                        </p>
-                        <p>
-                            <a href="blog.html#privatization">Read full article →</a>
-                        </p>
-                    </div>
-                </div>
-            
-                <div class="blog-post">
-                    <h2 class="blog-title">Weatherfluencers: How Storm Livestreamers Are Reshaping Crisis Communication in the Digital Age</h2>
-                    <div class="blog-meta">
-                        <span><i class="far fa-calendar"></i> February 27, 2025</span>
-                        <span><i class="fas fa-tag"></i> Weather, Weatherfluencers, Critical Services</span>
-                    </div>
-                    <div class="blog-content">
-                        <p>
-                            In recent years, a new breed of digital content creators has emerged on platforms like YouTube and TikTok: "weatherfluencers." These dedicated livestreamers provide real-time interpretation of severe weather events, translating complex meteorological data into accessible information for their growing audiences.
-                        </p>
-                        <p>
-                            <a href="blog.html#weatherfluencers">Read full article →</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        <!-- About Tab -->
+        <!-- ABOUT TAB -->
         <div class="tab-content" id="about">
             <div class="profile-highlights">
                 <div class="highlight-card">
@@ -596,7 +575,7 @@
             </div>
         </div>
 
-        <!-- Contact Tab -->
+        <!-- CONTACT TAB -->
         <div class="tab-content" id="contact">
             <div class="contact-section">
                 <h2>Get In Touch</h2>
@@ -634,135 +613,57 @@
     </footer>
 
     <script>
-        // Tab functionality
         document.addEventListener('DOMContentLoaded', function() {
             const tabs = document.querySelectorAll('.tab');
             const tabContents = document.querySelectorAll('.tab-content');
             
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
                     tabs.forEach(t => t.classList.remove('active'));
-                    
-                    // Add active class to clicked tab
                     tab.classList.add('active');
                     
-                    // Hide all tab contents
                     tabContents.forEach(content => content.classList.remove('active'));
                     
-                    // Show the corresponding tab content
                     const tabId = tab.getAttribute('data-tab');
                     document.getElementById(tabId).classList.add('active');
-                });
-            });
-            
-            // Filter functionality
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const filterTags = document.querySelectorAll('.filter-tag');
-            const posts = document.querySelectorAll('.post');
-            
-            // Type filtering
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
                     
-                    // Add active class to clicked button
-                    btn.classList.add('active');
-                    
-                    const filterValue = btn.getAttribute('data-filter');
-                    
-                    // Show/hide posts based on filter
-                    posts.forEach(post => {
-                        if (filterValue === 'all') {
-                            post.style.display = 'block';
-                        } else {
-                            if (post.classList.contains(`post-${filterValue}`)) {
-                                post.style.display = 'block';
-                            } else {
-                                post.style.display = 'none';
-                            }
-                        }
-                    });
-                });
-            });
-            
-            // Tag filtering
-            filterTags.forEach(tag => {
-                tag.addEventListener('click', () => {
-                    // Toggle active class
-                    tag.classList.toggle('active');
-                    
-                    // Get all active tags
-                    const activeTags = Array.from(document.querySelectorAll('.filter-tag.active'))
-                        .map(t => t.getAttribute('data-tag'));
-                    
-                    if (activeTags.length === 0) {
-                        // If no tags selected, show all posts
-                        posts.forEach(post => {
-                            post.style.display = 'block';
-                        });
-                    } else {
-                        // Filter posts by tags
-                        posts.forEach(post => {
-                            const postTags = Array.from(post.querySelectorAll('.post-tag'))
-                                .map(t => t.textContent.replace('#', ''));
-                            
-                            // Show post if it contains ANY of the selected tags
-                            const hasTag = activeTags.some(tag => postTags.includes(tag));
-                            post.style.display = hasTag ? 'block' : 'none';
-                        });
-                    }
-                    
-                    // Reset type filter when tags are active
-                    if (activeTags.length > 0) {
-                        filterBtns.forEach(b => b.classList.remove('active'));
-                        document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+                    // Populate filtered tabs
+                    if (tabId === 'publications') {
+                        populateFilteredFeed('publication');
+                    } else if (tabId === 'projects') {
+                        populateFilteredFeed('project');
+                    } else if (tabId === 'media') {
+                        populateFilteredFeed('media');
                     }
                 });
             });
             
-            // Interaction effects for posts
-            const postActions = document.querySelectorAll('.post-action');
-            postActions.forEach(action => {
-                action.addEventListener('click', function() {
-                    if (this.innerHTML.includes('fa-thumbs-up')) {
-                        const countEl = this.innerHTML.match(/\d+/);
-                        if (countEl) {
-                            const newCount = parseInt(countEl[0]) + 1;
-                            this.innerHTML = this.innerHTML.replace(/\d+/, newCount);
-                            this.style.color = '#FF00A8';
-                        }
-                    } else if (this.innerHTML.includes('fa-bookmark')) {
-                        this.style.color = '#FF00A8';
-                        this.innerHTML = this.innerHTML.replace('Save', 'Saved');
+            function populateFilteredFeed(type) {
+                const allPosts = document.querySelectorAll('#all .post');
+                const targetFeed = document.querySelector(`#${type}s .feed`);
+                targetFeed.innerHTML = '';
+                
+                allPosts.forEach(post => {
+                    if (post.classList.contains(`post-${type}`)) {
+                        targetFeed.appendChild(post.cloneNode(true));
                     }
                 });
-            });
-
-            // Navigation icon functionality
-            const navIcons = document.querySelectorAll('.nav-icons a');
-            navIcons.forEach(icon => {
-                icon.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const tabId = this.getAttribute('data-tab-link');
-                    
-                    // Find the corresponding tab and click it
-                    const tab = document.querySelector(`.tab[data-tab="${tabId}"]`);
-                    if (tab) {
-                        tab.click();
-                    }
-                    
-                    // Highlight the clicked icon
-                    navIcons.forEach(i => i.style.color = '');
-                    this.style.color = '#FF00A8';
-                });
-            });
-            
-            // Set the first icon as active by default
-            if (navIcons.length > 0) {
-                navIcons[0].style.color = '#FF00A8';
             }
+            
+            // Add interaction for post actions
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.post-action')) {
+                    const action = e.target.closest('.post-action');
+                    if (action.innerHTML.includes('fa-thumbs-up')) {
+                        const countMatch = action.innerHTML.match(/\d+/);
+                        if (countMatch) {
+                            const newCount = parseInt(countMatch[0]) + 1;
+                            action.innerHTML = action.innerHTML.replace(/\d+/, newCount);
+                            action.style.color = '#FF00A8';
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>
