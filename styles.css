@@ -557,6 +557,11 @@
             margin-right: 8px;
         }
 
+        .post-type-blog {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+
         /* Footer */
         footer {
             text-align: center;
