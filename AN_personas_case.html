@@ -1,578 +1,537 @@
-
 <!DOCTYPE html>
-<div id="persona_skeptic_card">
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Skeptic — AutoNation Buyer Archetype</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --ink: #1a1a18;
-    --ink-mid: #3d3d38;
-    --ink-muted: #7a7a72;
-    --ink-faint: #c8c8be;
-    --paper: #faf9f5;
-    --paper-warm: #f2f0e8;
-    --paper-ruled: #ebe8dc;
-    --accent: #8b1a2f;
-    --accent-mid: #b8293f;
-    --accent-pale: #f5e8ea;
-    --accent-border: #d4a0a8;
-    --rule: rgba(26,26,24,0.12);
-    --rule-mid: rgba(26,26,24,0.22);
-  }
-
-  body {
-    font-family: 'Inconsolata', monospace;
-    background: var(--paper);
-    color: var(--ink);
-    min-height: 100vh;
-    padding: 3rem 1.5rem;
-  }
-
-  .page {
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
-  /* ─── Provenance bar ─── */
-  .provenance {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    border-bottom: 0.5px solid var(--rule-mid);
-    padding-bottom: 0.75rem;
-    margin-bottom: 2.25rem;
-  }
-  .provenance-left { display: flex; align-items: center; gap: 1.25rem; }
-  .doc-id {
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    border: 0.5px solid var(--accent-border);
-    padding: 2px 8px;
-    background: var(--accent-pale);
-  }
-
-  /* ─── Header ─── */
-  .header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: end;
-    margin-bottom: 2.5rem;
-  }
-  .archetype-label {
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 0.5rem;
-  }
-  .archetype-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 1;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .archetype-name em {
-    font-style: italic;
-    color: var(--accent);
-  }
-  .tagline {
-    font-size: 1.05rem;
-    color: var(--ink-mid);
-    margin-top: 0.75rem;
-    max-width: 460px;
-    line-height: 1.5;
-    font-weight: 300;
-  }
-  .archetype-index {
-    text-align: right;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-  .archetype-index-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    font-weight: 400;
-    line-height: 1;
-    color: var(--ink-faint);
-    display: block;
-    text-align: right;
-  }
-
-  /* ─── Anchor quote ─── */
-  .anchor-quote {
-    border-left: 3px solid var(--accent);
-    padding: 1rem 1.5rem;
-    margin-bottom: 2.5rem;
-    background: var(--accent-pale);
-  }
-  .anchor-quote blockquote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.1rem;
-    line-height: 1.65;
-    color: var(--accent);
-  }
-  .anchor-quote cite {
-    display: block;
-    margin-top: 0.5rem;
-    font-family: 'Inconsolata', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    font-style: normal;
-  }
-
-  /* ─── Zone grid ─── */
-  .zones {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 0.5px solid var(--rule-mid);
-  }
-
-  .zone {
-    padding: 1.75rem;
-    border-right: 0.5px solid var(--rule-mid);
-    border-bottom: 0.5px solid var(--rule-mid);
-  }
-  .zone:nth-child(2n) { border-right: none; }
-  .zone:nth-last-child(-n+2) { border-bottom: none; }
-
-  .zone-label {
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .zone-label::after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-    background: var(--accent-border);
-  }
-
-  .field {
-    margin-bottom: 1.1rem;
-  }
-  .field:last-child { margin-bottom: 0; }
-
-  .field-key {
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 0.2rem;
-  }
-  .field-value {
-    font-size: 0.9rem;
-    line-height: 1.55;
-    color: var(--ink);
-    font-weight: 400;
-  }
-  .field-value.emphasis {
-    font-weight: 600;
-    color: var(--ink);
-  }
-
-  /* ─── Emotion arc ─── */
-  .arc-track {
-    display: flex;
-    gap: 0;
-    margin: 0.75rem 0 0;
-    position: relative;
-  }
-  .arc-stage {
-    flex: 1;
-    text-align: center;
-    position: relative;
-  }
-  .arc-stage + .arc-stage::before {
-    content: '→';
-    position: absolute;
-    left: -6px;
-    top: 22px;
-    font-size: 10px;
-    color: var(--ink-faint);
-    line-height: 1;
-  }
-  .arc-dot {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    margin: 0 auto 0.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    border: 1.5px solid;
-  }
-  .arc-dot.low { background: var(--paper-warm); border-color: var(--ink-faint); color: var(--ink-muted); }
-  .arc-dot.mid { background: #fff3cd; border-color: #c49a00; color: #6b5200; }
-  .arc-dot.high { background: #fce4e4; border-color: var(--accent-border); color: var(--accent); }
-  .arc-dot.resolve-good { background: #e8f5e0; border-color: #5a9a2f; color: #2d5c10; }
-  .arc-dot.resolve-bad { background: var(--accent-pale); border-color: var(--accent-border); color: var(--accent); }
-
-  .arc-stage-label {
-    font-size: 8.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 0.15rem;
-  }
-  .arc-stage-emotion {
-    font-size: 9.5px;
-    color: var(--ink);
-    line-height: 1.3;
-    font-weight: 500;
-  }
-
-  /* ─── Tags ─── */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-top: 0.4rem;
-  }
-  .tag {
-    font-size: 9px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border: 0.5px solid var(--rule-mid);
-    color: var(--ink-mid);
-    background: var(--paper-warm);
-  }
-  .tag.alert {
-    border-color: var(--accent-border);
-    color: var(--accent);
-    background: var(--accent-pale);
-  }
-  .tag.go {
-    border-color: #a0c880;
-    color: #2d5c10;
-    background: #f0f7e8;
-  }
-
-  /* ─── Evidence box ─── */
-  .evidence-box {
-    margin-top: 1.5rem;
-    border-top: 0.5px solid var(--rule);
-    padding-top: 1.5rem;
-  }
-  .evidence-label {
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .evidence-label::after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-    background: var(--rule);
-  }
-  .evidence-quotes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .evidence-quote {
-    background: var(--paper-warm);
-    border-left: 2px solid var(--accent-border);
-    padding: 0.9rem 1rem;
-  }
-  .evidence-quote q {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 0.85rem;
-    line-height: 1.55;
-    color: var(--ink-mid);
-    quotes: '\201C' '\201D';
-  }
-  .evidence-quote q::before { content: open-quote; }
-  .evidence-quote q::after { content: close-quote; }
-  .evidence-quote .src {
-    margin-top: 0.5rem;
-    font-size: 9px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-
-  /* ─── Footer ─── */
-  .footer-rule {
-    border: none;
-    border-top: 0.5px solid var(--rule-mid);
-    margin: 2.5rem 0 1rem;
-  }
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-  .footer-brand { display: flex; align-items: center; gap: 0.5rem; }
-
-  @media (max-width: 640px) {
-    .zones { grid-template-columns: 1fr; }
-    .zone { border-right: none; }
-    .zone:nth-last-child(-n+2) { border-bottom: 0.5px solid var(--rule-mid); }
-    .zone:last-child { border-bottom: none; }
-    .header { grid-template-columns: 1fr; }
-    .archetype-index-num { font-size: 3rem; text-align: left; }
-    .evidence-quotes { grid-template-columns: 1fr; }
-    .arc-stage + .arc-stage::before { display: none; }
-    .archetype-name { font-size: 2.5rem; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Vera | Case Study: AutoNation Consumer Persona Development</title>
+    <meta name="description" content="UX Research case study by Julie Vera on building AutoNation's first behavioral persona framework from a greenfield research program.">
+    <script src="https://kit.fontawesome.com/71e8b9df83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="case-study.css">
 </head>
 <body>
-<div class="page">
-
-  <!-- Provenance -->
-  <div class="provenance">
-    <div class="provenance-left">
-      <span>AutoNation Consumer Behavioral Persona Framework</span>
-      <span class="doc-id">ARCH-03 / THE SKEPTIC</span>
-    </div>
-    <span>Research: J. Vera · 2024</span>
-  </div>
-
-  <!-- Header -->
-  <div class="header">
-    <div>
-      <div class="archetype-label">Behavioral Archetype · 03 of 06</div>
-      <div class="archetype-name">The <em>Skeptic</em></div>
-      <div class="tagline">Armed with information. Ready to walk. Treats every dealership interaction as a negotiation they are determined not to lose.</div>
-    </div>
-    <div class="archetype-index">
-      <span>Archetype</span>
-      <span class="archetype-index-num">03</span>
-    </div>
-  </div>
-
-  <!-- Anchor quote -->
-  <div class="anchor-quote">
-    <blockquote>I'm what I call a double negative person — instead of looking for things that are good, I look for things that are not bad.</blockquote>
-    <cite>— P17 · Galiphile · Used vehicle buyer</cite>
-  </div>
-
-  <!-- Zone grid -->
-  <div class="zones">
-
-    <!-- Zone A: Identity -->
-    <div class="zone">
-      <div class="zone-label">A · Identity</div>
-
-      <div class="field">
-        <div class="field-key">Core motivation</div>
-        <div class="field-value emphasis">To not be taken advantage of.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Vehicle context</div>
-        <div class="field-value">New and used; Skeptic density is higher among used buyers who contend with greater information asymmetry (condition, history, authenticity).</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Relationship to car buying</div>
-        <div class="field-value">A high-stakes game with a structurally disadvantaged position — one they work hard to correct before walking in the door.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Self-perception</div>
-        <div class="field-value">Savvy. Prepared. Not the kind of person who gets taken for a ride. Sees other buyers as naive by comparison.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Characteristic entry point</div>
-        <div class="field-value">KBB, Edmunds, CarGurus, AutoTrader — and increasingly, generative AI for multi-source data aggregation and comparison.</div>
-      </div>
-    </div>
-
-    <!-- Zone B: Behavioral Core -->
-    <div class="zone">
-      <div class="zone-label">B · Behavioral Core</div>
-
-      <div class="field">
-        <div class="field-key">Information strategy</div>
-        <div class="field-value">Extensive, multi-source, systematic. Cross-references pricing across platforms. Arrives at dealerships with screenshots, saved listings, and competing offers. Information is ammunition.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Decision orientation</div>
-        <div class="field-value">Protective rather than exploratory. Screens <em>out</em> options more than screening in. A dealership must fail to give them a reason to distrust before they'll proceed.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Dealership dynamic</div>
-        <div class="field-value">Deliberately withholds budget and intent. Uses competing offers as leverage. Prepared to walk — and has. Hostile to upselling; reads it as confirmation of adversarial intent.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Immediate red flags</div>
-        <div class="tags">
-          <span class="tag alert">Hidden fees</span>
-          <span class="tag alert">Gated pricing</span>
-          <span class="tag alert">Pressure tactics</span>
-          <span class="tag alert">Inconsistent info</span>
-          <span class="tag alert">Upsell attempts</span>
+    <header>
+        <div class="header-content container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo, an 8-bit, bright pink pixelated image of a coffee cup." height="60">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Back to Portfolio</a>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <div class="field">
-        <div class="field-key">Trust signals that work</div>
-        <div class="tags">
-          <span class="tag go">No-haggle pricing</span>
-          <span class="tag go">Out-the-door price visible</span>
-          <span class="tag go">Carfax / inspection reports</span>
-          <span class="tag go">Consistent online/in-person info</span>
+    <main class="container">
+        <!-- Case Study Header -->
+        <section class="case-study-header">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> /
+                <a href="index.html#feed">Portfolio</a> /
+                <span>Case Study</span>
+            </div>
+            <div class="post-type-indicator post-type-project">UX Research Project</div>
+            <h1>AutoNation: Building a Behavioral Persona Framework from Zero</h1>
+            <div class="case-meta">
+                <div class="meta-item">
+                    <i class="far fa-calendar"></i>
+                    <span>Timeline: 2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>Team: Solo Project</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Role: Lead UX Researcher</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Overview Section -->
+        <section class="overview-section">
+            <div class="overview-card">
+                <div class="overview-content">
+                    <h2>Overview</h2>
+                    <p>When I joined AutoNation, there was no consumer research infrastructure and no personas. I designed and executed a greenfield mixed-methods research program to build the organization's first behavioral persona framework — grounded in transcript evidence, designed for multiple audiences, and structured to feed directly into a follow-on quantitative validation phase.</p>
+                </div>
+            </div>
+            <div class="overview-stats">
+                <div class="stat">
+                    <div class="stat-value">30</div>
+                    <div class="stat-label">Moderated Interviews</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Behavioral Archetypes</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">60+</div>
+                    <div class="stat-label">Codebook Entries</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Tags -->
+        <section class="project-tags">
+            <div class="tag-section">
+                <h3>Research Methods</h3>
+                <div class="tags">
+                    <span class="tag method-tag">Moderated Remote Interviews</span>
+                    <span class="tag method-tag">Reflexive Thematic Analysis</span>
+                    <span class="tag method-tag">Quantitative Survey</span>
+                    <span class="tag method-tag">Behavioral Archetype Development</span>
+                </div>
+            </div>
+            <div class="tag-section">
+                <h3>Tools Used</h3>
+                <div class="tags">
+                    <span class="tag tool-tag">UserTesting.com</span>
+                    <span class="tag tool-tag">Miro</span>
+                    <span class="tag tool-tag">Figma</span>
+                    <span class="tag tool-tag">Excel</span>
+                </div>
+            </div>
+            <div class="tag-section">
+                <h3>Domains</h3>
+                <div class="tags">
+                    <span class="tag domain-tag">Automotive Retail</span>
+                    <span class="tag domain-tag">Consumer Behavior</span>
+                    <span class="tag domain-tag">Mixed-Methods Research</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2>Contents</h2>
+            <div class="toc-columns">
+                <div class="toc-column">
+                    <ol>
+                        <li><a href="#background">Background</a></li>
+                        <li><a href="#objectives">Objectives</a></li>
+                        <li><a href="#approach">Methodology</a></li>
+                        <li><a href="#findings">Findings</a></li>
+                    </ol>
+                </div>
+                <div class="toc-column">
+                    <ol start="5">
+                        <li><a href="#insights">Insights</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                        <li><a href="#reflections">Reflections</a></li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Sections -->
+        <section id="background" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                <h2>Background & Context</h2>
+            </div>
+            <div class="section-content">
+                <p>AutoNation is the largest automotive retailer in the United States — and like much of the auto industry, it has been navigating an accelerating shift from a traditionally in-person, relationship-driven business toward a digital-first customer experience. That transformation requires knowing who your buyers actually are. When I joined the team, that foundational knowledge didn't exist in any structured form.</p>
+
+                <p>There were no personas. No prior behavioral research. No segmentation models grounded in how customers actually make decisions. What existed was a general sense of AutoNation's customer demographics — but demographics don't tell you why someone walks out of a dealership after three hours without signing, or what would have made the online research phase feel less like a game they were losing.</p>
+
+                <p>This project was my onboarding project. Rather than waiting to be assigned work, I identified the gap and proposed building the research program from the ground up. The goal was to give AutoNation something it had never had: a behaviorally grounded understanding of the U.S. car-buying consumer, developed using rigorous qualitative methods and designed from day one to feed into quantitative validation.</p>
+            </div>
+        </section>
+
+        <section id="objectives" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                <h2>Research Objectives</h2>
+            </div>
+            <div class="section-content">
+                <p>The central design decision for this project was a deliberate shift in how we thought about personas. Prior work in the industry — and in most UX practice generally — tends to anchor personas in demographics: age, income, geography, job title. Those variables are easy to collect and easy to present, but they don't explain behavior. A 35-year-old with a $60K salary can behave like any of a dozen different buyer types depending on their relationship to information, trust, risk, and the dealership process itself.</p>
+
+                <p>I wanted to build personas around <em>behavior and emotion</em> — how people actually move through the car-buying journey, what triggers anxiety or confidence at different stages, and where the experience breaks down. That framing shaped every methodological decision that followed.</p>
+
+                <div class="objectives-list">
+                    <div class="objective-item">
+                        <div class="objective-number">1</div>
+                        <div class="objective-text">Understand the full end-to-end car-buying journey, from initial consideration through post-purchase</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">2</div>
+                        <div class="objective-text">Identify behavioral and emotional patterns that distinguish meaningfully different buyer types</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">3</div>
+                        <div class="objective-text">Surface differences between new and used vehicle buyers — an underexamined distinction</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">4</div>
+                        <div class="objective-text">Identify pain points in the digital purchase experience</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">5</div>
+                        <div class="objective-text">Produce a codebook and archetype framework rigorous enough to anchor a follow-on quantitative survey</div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-number">6</div>
+                        <div class="objective-text">Deliver outputs that would be legible and actionable for executive leadership, marketing, product, and design — simultaneously</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-microscope"></i></div>
+                <h2>Approach & Methodology</h2>
+            </div>
+            <div class="section-content">
+                <p>This was a sequenced mixed-methods program. The qualitative phase came first and was explicitly designed to inform the quantitative instrument — not as an afterthought, but as the structural logic of the whole program.</p>
+
+                <div class="methodology-cards">
+                    <div class="method-card">
+                        <div class="method-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Phase 1: Moderated Remote Interviews</h3>
+                        <p>I conducted 30 moderated remote interviews via UserTesting.com with recent U.S. car buyers — people who had purchased or were actively in the market for a vehicle. Sessions were semi-structured, covering the full purchase journey from initial consideration through dealership experience and post-purchase reflection.</p>
+                        <div class="method-details">
+                            <div class="method-stat">30 participants</div>
+                            <div class="method-stat">Recent car buyers (new + used)</div>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Phase 2: Quantitative Survey</h3>
+                        <p>Interview findings directly informed the design of a 15-item quantitative survey, also deployed via UserTesting.com. The survey was built to test how far the behavioral patterns identified in the qualitative phase scaled across a broader population, with explicit stratification for new vs. used buyers.</p>
+                        <div class="method-details">
+                            <div class="method-stat">15-item instrument</div>
+                            <div class="method-stat">New/used buyer stratification</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Analysis: Braun & Clarke Reflexive Thematic Analysis</h3>
+                <p>I analyzed the interview transcripts using Braun & Clarke's reflexive thematic analysis (RTA) — a framework that treats the researcher's interpretive engagement as an asset rather than a source of bias to be controlled away. Unlike codebook-driven approaches or grounded theory, RTA is designed for the kind of meaning-making work required here: developing a rich, theoretically coherent account of patterns across a heterogeneous participant set, without forcing data into a predetermined structure.</p>
+
+                <p>The analysis produced a hierarchical codebook with <strong>8 themes, 26 sub-themes, and 60+ codes</strong>. Each code was anchored to specific transcript evidence. The full audit trail — code evidence matrices, analytical decision logs, and participant-to-archetype assignments — was maintained as a first-class deliverable alongside the persona outputs.</p>
+
+                <div class="finding-card">
+                    <h3>Codebook Structure Overview</h3>
+                    <p>The 8 themes spanned the full purchase journey and captured both behavioral and emotional dimensions: information-seeking behavior, trust formation and rupture, dealership dynamics, digital touchpoints, emotional regulation, decision triggers, post-purchase sense-making, and identity in relation to car ownership. These themes served as the structural backbone for the six behavioral archetypes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="findings" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-chart-bar"></i></div>
+                <h2>Key Findings</h2>
+            </div>
+            <div class="section-content">
+                <p>The most significant finding from this research is structural: the qualitative data did not support a demographic account of car-buying behavior. Participants who looked identical on paper — same age, same income band, same vehicle category — behaved in fundamentally different ways. The meaningful variation was behavioral and emotional, and it was consistent enough across the dataset to warrant distinct archetype designations.</p>
+
+                <div class="finding-card">
+                    <h3>Finding 1: The Emotional Architecture of Car Buying</h3>
+                    <p>Across participants, car buying was experienced as a high-stakes, emotionally effortful process — not primarily a rational one. Key emotional patterns included: anticipatory anxiety about being misled or overcharged; information-accumulation as an emotional regulation strategy; acute tension at the point of dealership contact; and significant relief — or frustration — at close. These patterns did not vary by vehicle price or buyer experience level. They varied by archetype.</p>
+                    <div class="quote-callout">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>It's almost like clouds in the sky — there's a jillion clouds and you have to pull them all down. Some you push away. Some you need to keep. There's just so much out there and it's hard to pull in the things that matter.</blockquote>
+                        <div class="quote-attribution">— Participant P10</div>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <h3>Finding 2: Information Asymmetry as the Central Pain Point</h3>
+                    <p>The most consistently named source of frustration across the dataset was information asymmetry: the sense that dealerships held pricing, availability, and financing information that buyers could not independently verify. Participants responded to this asymmetry in divergent ways — some by over-researching, some by disengaging, some by delegating the process entirely — and those divergent responses are what differentiate the archetypes.</p>
+                    <div class="quote-callout">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>I arm myself with information before I walk in. That's my ammo. If they can't match what I know the car is worth, I'll walk out, and I've done it.</blockquote>
+                        <div class="quote-attribution">— Participant P24</div>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <h3>Finding 3: The New/Used Divide Is a Behavioral Fault Line</h3>
+                    <p>New and used buyers were not just purchasing different products — they were navigating fundamentally different informational and emotional landscapes. Used buyers contended with authenticity verification, condition uncertainty, and private-seller dynamics that new buyers did not encounter. This distinction had been underweighted in how AutoNation thought about its customer base, and surfaced as a significant organizational blind spot.</p>
+                </div>
+
+                <div class="finding-card">
+                    <h3>Finding 4: Six Behavioral Archetypes</h3>
+                    <p>The thematic analysis resolved into six behaviorally distinct archetypes. Each was defined by a characteristic relationship to information, trust, decision-making, and emotional regulation — not by demographics. The archetypes were designed with non-overlapping behavioral cores and grounded in specific transcript evidence.</p>
+                    <div class="archetypes-grid">
+                        <div class="archetype-chip">
+                            <strong>The Strategist</strong>
+                            <span>Plans meticulously; treats the process as a project to optimize</span>
+                        </div>
+                        <div class="archetype-chip">
+                            <strong>The Loyalist</strong>
+                            <span>Anchored to a brand or dealer; minimizes decision effort through established trust</span>
+                        </div>
+                        <div class="archetype-chip archetype-chip--highlight">
+                            <strong>The Skeptic</strong>
+                            <span>Defensive and information-armored; treats every dealership interaction as adversarial</span>
+                        </div>
+                        <div class="archetype-chip">
+                            <strong>The Exhausted Pragmatist</strong>
+                            <span>Wants the process over; tolerates imperfect outcomes to escape the burden of deciding</span>
+                        </div>
+                        <div class="archetype-chip">
+                            <strong>The Delegated Buyer</strong>
+                            <span>Outsources key decisions to a trusted proxy; low personal engagement with the process</span>
+                        </div>
+                        <div class="archetype-chip">
+                            <strong>The Visceral Buyer</strong>
+                            <span>Driven by emotional resonance with a vehicle; research plays a confirming rather than directing role</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem;"><a href="skeptic-persona.html" class="next-case-link" style="display:inline-block; margin-top: 0.5rem;">→ View The Skeptic Persona Card</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                <h2>Insights & Recommendations</h2>
+            </div>
+            <div class="section-content">
+                <p>The behavioral archetype framework generates concrete product and design implications that demographic personas cannot. Because each archetype is defined by its characteristic information needs, trust thresholds, and decision-making patterns, it points directly to where the digital experience is and isn't working — and for whom.</p>
+
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Radical Price Transparency as a Baseline</h3>
+                        </div>
+                        <p>Multiple archetypes — most acutely The Skeptic and The Exhausted Pragmatist — are lost before the dealership interaction begins, at the moment when price information is obscured or requires a form submission to access. Surfacing real pricing earlier in the digital journey would serve the majority of buyer types.</p>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul>
+                                <li>Display out-the-door price estimates (including fees) on listing pages</li>
+                                <li>Surface no-haggle designations prominently where applicable</li>
+                                <li>Reduce gated information (email-required pricing) in the digital research phase</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Archetype-Aware Communication Design</h3>
+                        </div>
+                        <p>The six archetypes respond to fundamentally different communication styles and information architectures. A one-size-fits-all digital experience cannot serve The Strategist (who wants data density) and The Visceral Buyer (who wants emotional resonance) simultaneously without intentional design decisions.</p>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul>
+                                <li>Use the archetypes as testing lenses in usability and A/B research</li>
+                                <li>Design listing pages to support multiple entry points (emotional vs. analytical)</li>
+                                <li>Develop archetype-specific communication templates for sales training</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Close the New/Used Research Gap</h3>
+                        </div>
+                        <p>The behavioral and informational differences between new and used buyers are significant enough to warrant separate product and content strategies. Treating them as a single audience obscures distinct needs and creates friction for both groups.</p>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul>
+                                <li>Conduct dedicated used-buyer journey research as a follow-on study</li>
+                                <li>Stratify quantitative survey quota by new/used to enable group-level analysis</li>
+                                <li>Evaluate whether listing UX should diverge for new vs. pre-owned inventory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-rocket"></i></div>
+                <h2>Impact & Outcomes</h2>
+            </div>
+            <div class="section-content">
+                <p>The research program produced outcomes at multiple levels of the organization.</p>
+
+                <p>The six behavioral archetypes were presented to executive leadership and adopted by product and design teams as an active reference framework — the first time AutoNation had a shared, research-backed vocabulary for talking about who its buyers are and how they behave. The archetypes are currently in use as testing lenses in ongoing product work.</p>
+
+                <p>The qualitative phase directly informed the design of a 15-item quantitative survey instrument, which is now in deployment. The survey was built to validate archetype prevalence at scale and to enable cluster analysis — turning qualitative patterns into quantitatively defensible segments. This is the infrastructure that makes the archetypes strategically durable rather than a one-time deliverable.</p>
+
+                <p>Perhaps most significantly, the research surfaced the new/used buyer distinction as an organizational blind spot — a gap in how AutoNation understood its own customer base. That finding has opened a dedicated research thread.</p>
+
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-value">6</div>
+                        <div class="impact-label">Behavioral Archetypes Established</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-value">0→1</div>
+                        <div class="impact-label">Research Infrastructure Built</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-value">2</div>
+                        <div class="impact-label">Research Phases Completed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reflections" class="content-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-brain"></i></div>
+                <h2>Reflections</h2>
+            </div>
+            <div class="section-content">
+                <p>Building a research program from nothing is a different challenge than running a study within an established infrastructure. There was no prior work to triangulate against, no existing segmentation to validate or challenge, no institutional knowledge about what had been tried before. Every methodological decision was mine to make and defend.</p>
+
+                <div class="reflections-grid">
+                    <div class="reflection-card">
+                        <h3>What Went Well</h3>
+                        <ul>
+                            <li>Grounding archetype distinctions in behavioral and emotional evidence — rather than demographics — gave the framework immediate credibility with product and design teams who had grown skeptical of persona work</li>
+                            <li>Building the audit trail in parallel with analysis meant the methodology was fully defensible when stakeholders pushed on findings</li>
+                            <li>Designing the qualitative phase with the quantitative instrument in mind from the start made phase transitions faster and the outputs more connected</li>
+                        </ul>
+                    </div>
+
+                    <div class="reflection-card">
+                        <h3>What Was Hard</h3>
+                        <ul>
+                            <li>Serving executive, marketing, product, and design audiences simultaneously requires genuinely different framings of the same material — not just a font change on the slide deck. Writing for multiple audiences at once is a skill I was actively developing on this project</li>
+                            <li>With no prior research to reference, every finding had to be both discovered and made legible from scratch. There was no shortcut to establishing the conceptual vocabulary the organization needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="reflection-card">
+                        <h3>What I'd Do Differently</h3>
+                        <ul>
+                            <li>Build stakeholder co-analysis touchpoints earlier — even informal ones. Getting product and marketing partners to engage with raw data earlier in the process builds archetype ownership before the formal readout</li>
+                            <li>Propose a dedicated used-buyer interview cohort from the start rather than treating new/used as a within-study subgroup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Next Case Study Teaser -->
+    <section class="next-case-study">
+        <div class="container">
+            <div class="next-case-header">
+                <div class="next-label">Next Case Study</div>
+                <div class="next-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="next-case-content">
+                <h2>Sensemaking During Crisis Events on TikTok</h2>
+                <p>Exploring how users make sense of natural disasters and breaking news on short-form video platforms</p>
+                <a href="tiktok-crisis-study.html" class="next-case-link">View Case Study</a>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- Zone C: Journey Emotional Arc -->
-    <div class="zone">
-      <div class="zone-label">C · Journey Emotional Arc</div>
-
-      <div class="arc-track">
-        <div class="arc-stage">
-          <div class="arc-dot low">·</div>
-          <div class="arc-stage-label">Need</div>
-          <div class="arc-stage-emotion">Wary anticipation</div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="images/coffeelogo.png" alt="Julie Vera's logo" height="40">
+                    <p>&copy; 2025 Julie Vera • All Rights Reserved</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="mailto:jvera@uw.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/julievera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://linktr.ee/julievera" target="_blank"><i class="fas fa-tree"></i></a>
+                        <a href="https://bsky.app/profile/julievera.com" target="_blank"><i class="fas fa-cloud"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="arc-stage">
-          <div class="arc-dot mid">↑</div>
-          <div class="arc-stage-label">Research</div>
-          <div class="arc-stage-emotion">Building control</div>
-        </div>
-        <div class="arc-stage">
-          <div class="arc-dot high">!</div>
-          <div class="arc-stage-label">Dealership</div>
-          <div class="arc-stage-emotion">Acute vigilance</div>
-        </div>
-        <div class="arc-stage">
-          <div class="arc-dot resolve-good">✓</div>
-          <div class="arc-stage-label">Close (win)</div>
-          <div class="arc-stage-emotion">Vindication</div>
-        </div>
-      </div>
+    </footer>
 
-      <div class="field" style="margin-top: 1.25rem;">
-        <div class="field-key">At the research phase</div>
-        <div class="field-value">This is where The Skeptic feels most in control. Systematic information gathering is their emotional regulation strategy. Confidence scales with data volume.</div>
-      </div>
+    <style>
+        .archetypes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+        .archetype-chip {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+        .archetype-chip strong {
+            font-size: 0.95rem;
+        }
+        .archetype-chip span {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        .archetype-chip--highlight {
+            border-color: #ff4d94;
+            background: #fff0f6;
+        }
+        .archetype-chip--highlight strong {
+            color: #cc0066;
+        }
+        .impact-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .impact-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .impact-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff4d94;
+            font-family: 'Inconsolata', monospace;
+        }
+        .impact-label {
+            font-size: 0.85rem;
+            color: #555;
+            max-width: 150px;
+        }
+    </style>
 
-      <div class="field">
-        <div class="field-key">At the dealership</div>
-        <div class="field-value">Vigilance peaks. Reads every interaction for signs of manipulation. Mentally rehearsed for negotiation; any deviation from scripted expectations reads as a threat.</div>
-      </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-      <div class="field">
-        <div class="field-key">At close — if deal closes on their terms</div>
-        <div class="field-value">Relief and satisfaction. Tells the story to others as a win. Strong candidate for return purchase if trust is established.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">At close — if they walk away</div>
-        <div class="field-value">Frustration shades into righteous indignation. Validates their worldview. Will actively share the negative experience.</div>
-      </div>
-    </div>
-
-    <!-- Zone D: Product & Business Implications -->
-    <div class="zone">
-      <div class="zone-label">D · Product & Business Implications</div>
-
-      <div class="field">
-        <div class="field-key">Where the digital experience loses them</div>
-        <div class="field-value">Any moment that requires a form submission to access pricing. Any listing where online and in-person numbers diverge. Any interface that feels like it's withholding information.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Design opportunities</div>
-        <div class="field-value">Out-the-door price estimators visible without gate. No-haggle badge on applicable inventory. Carfax and inspection report surfaced on listing page. Pricing consistency guarantee messaging.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Messaging approach</div>
-        <div class="field-value">Data-forward. Specificity signals honesty. Never overpromise. Lead with transparency, not salesmanship. Let them feel they found the information — don't push it at them.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Conversion lever</div>
-        <div class="field-value emphasis">Give them the win. Let them feel they got the deal they researched their way to. The margin on trust far exceeds the margin on any individual negotiation.</div>
-      </div>
-
-      <div class="field">
-        <div class="field-key">Retention risk</div>
-        <div class="field-value">Extremely loyal if trust is established. Extremely vocal if it isn't. High word-of-mouth amplification in both directions.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Evidence -->
-  <div class="evidence-box">
-    <div class="evidence-label">Transcript Evidence</div>
-    <div class="evidence-quotes">
-      <div class="evidence-quote">
-        <q>I arm myself with information before I walk in. That's my ammo. If they can't match what I know the car is worth, I'll walk out — and I've done it.</q>
-        <div class="src">P24 · Badfish21 · New vehicle buyer</div>
-      </div>
-      <div class="evidence-quote">
-        <q>I screenshotted the promotion and brought it with me, because I was nervous they'd say they couldn't honor it. I needed to have proof.</q>
-        <div class="src">P05 · user4497 · New vehicle buyer</div>
-      </div>
-      <div class="evidence-quote">
-        <q>I have every right to walk out of there respectfully. And believe it or not, that's one of the best negotiation tactics — because 9 times out of 10 they'll come running after you.</q>
-        <div class="src">P24 · Badfish21 · New vehicle buyer</div>
-      </div>
-      <div class="evidence-quote">
-        <q>I wasn't necessarily looking for things that were good — it was more about not finding things that made me distrust the dealership.</q>
-        <div class="src">P17 · Galiphile · Used vehicle buyer</div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="footer-rule">
-  <div class="footer">
-    <div class="footer-brand">
-      <span>AutoNation Consumer Persona Framework</span>
-      <span>·</span>
-      <span>Qual Phase · N=30 · Braun &amp; Clarke RTA</span>
-    </div>
-    <span>ARCH-03 · The Skeptic · Confidential</span>
-  </div>
-
-</div>
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.content-section');
+            const tocLinks = document.querySelectorAll('.toc a');
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if(pageYOffset >= (sectionTop - 300)) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-</div>
