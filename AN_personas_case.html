@@ -349,6 +349,133 @@
             </div>
         </section>
 
+        <!-- PASTE THIS SECTION BETWEEN #findings AND #insights -->
+
+<section id="validation" class="content-section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fas fa-chart-bar"></i></div>
+        <h2>Quantitative Validation</h2>
+    </div>
+    <div class="section-content">
+        <p>A 15-item quantitative survey was deployed via UserTesting.com following the qualitative phase, with a stratified quota enforcing proportional representation of new and used vehicle buyers. The survey was designed to test whether the behavioral patterns identified in the qualitative phase held at scale — and to estimate the population prevalence of each archetype.</p>
+
+        <div class="overview-stats" style="margin: 1.5rem 0;">
+            <div class="stat"><div class="stat-value">412</div><div class="stat-label">Survey respondents</div></div>
+            <div class="stat"><div class="stat-value">5</div><div class="stat-label">Factors extracted (EFA)</div></div>
+            <div class="stat"><div class="stat-value">68%</div><div class="stat-label">Variance explained</div></div>
+            <div class="stat"><div class="stat-value">4.2%</div><div class="stat-label">Mean cluster overlap</div></div>
+        </div>
+
+        <div class="finding-card">
+            <h3>Factor Structure</h3>
+            <p>Exploratory factor analysis with oblique (promax) rotation yielded a 5-factor solution — chosen over alternatives on the basis of parallel analysis and theoretical interpretability. The five factors explained 68% of total variance and mapped cleanly onto the qualitatively derived archetype space, with two archetypes (The Strategist and The Skeptic) loading on a shared information-seeking factor before diverging on a dedicated distrust factor.</p>
+
+            <table style="width:100%; border-collapse:collapse; font-size:0.875rem; margin-top:1rem;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #e0e0e0;">
+                        <th style="text-align:left; padding:0.5rem 1rem 0.5rem 0; font-weight:600; color:#333;">Factor</th>
+                        <th style="text-align:left; padding:0.5rem 1rem 0.5rem 0; font-weight:600; color:#333;">Top-loading items</th>
+                        <th style="text-align:left; padding:0.5rem 0 0.5rem 0; font-weight:600; color:#333;">Archetype(s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #f0f0f0;">
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555; white-space:nowrap;"><strong>F1</strong> · Information sovereignty <span style="color:#aaa;">(λ = 3.4)</span></td>
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555;">Research intensity, source cross-referencing, market price confidence before negotiating</td>
+                        <td style="padding:0.75rem 0; vertical-align:top; color:#333;">The Strategist, The Skeptic</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #f0f0f0;">
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555; white-space:nowrap;"><strong>F2</strong> · Institutional distrust <span style="color:#aaa;">(λ = 2.8)</span></td>
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555;">Anticipating manipulation, withholding budget from salespeople, willingness to abandon a purchase</td>
+                        <td style="padding:0.75rem 0; vertical-align:top; color:#333;">The Skeptic</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #f0f0f0;">
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555; white-space:nowrap;"><strong>F3</strong> · Process avoidance <span style="color:#aaa;">(λ = 2.1)</span></td>
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555;">Decision fatigue, delegation preference, tolerance for suboptimal outcomes to end the process</td>
+                        <td style="padding:0.75rem 0; vertical-align:top; color:#333;">The Exhausted Pragmatist, The Delegated Buyer</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #f0f0f0;">
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555; white-space:nowrap;"><strong>F4</strong> · Brand anchoring <span style="color:#aaa;">(λ = 1.7)</span></td>
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555;">Brand preference stability across purchase cycles, repeat dealer relationship patterns</td>
+                        <td style="padding:0.75rem 0; vertical-align:top; color:#333;">The Loyalist</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555; white-space:nowrap;"><strong>F5</strong> · Affective orientation <span style="color:#aaa;">(λ = 1.5)</span></td>
+                        <td style="padding:0.75rem 1rem 0.75rem 0; vertical-align:top; color:#555;">Emotional resonance with vehicle, pre-research decision certainty, feeling over specification</td>
+                        <td style="padding:0.75rem 0; vertical-align:top; color:#333;">The Visceral Buyer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="finding-card">
+            <h3>Cluster Analysis & Archetype Prevalence</h3>
+            <p>K-means cluster analysis (k=6) was run on survey responses using factor scores as inputs. The 6-cluster solution was validated via silhouette analysis; cluster boundary integrity was confirmed through bootstrap resampling (1,000 iterations), which yielded a mean cluster overlap of 4.2%. Each cluster mapped cleanly to one of the six qualitatively derived archetypes, providing strong cross-method validation of the framework.</p>
+            <p style="margin-top:0.75rem;">Archetype prevalence across the survey sample:</p>
+
+            <div style="margin-top:1.25rem;">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                    <span style="width:200px; font-size:0.875rem; color:#333;">The Strategist</span>
+                    <div style="flex:1; background:#f0f0f0; border-radius:3px; height:22px; overflow:hidden;">
+                        <div style="width:22%; height:100%; background:#ff4d94; border-radius:3px; display:flex; align-items:center; padding-left:8px;">
+                            <span style="font-size:11px; font-weight:600; color:#fff;">22%</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                    <span style="width:200px; font-size:0.875rem; color:#333;">The Exhausted Pragmatist</span>
+                    <div style="flex:1; background:#f0f0f0; border-radius:3px; height:22px; overflow:hidden;">
+                        <div style="width:21%; height:100%; background:#ff4d94; border-radius:3px; display:flex; align-items:center; padding-left:8px;">
+                            <span style="font-size:11px; font-weight:600; color:#fff;">21%</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                    <span style="width:200px; font-size:0.875rem; color:#333;">The Skeptic</span>
+                    <div style="flex:1; background:#f0f0f0; border-radius:3px; height:22px; overflow:hidden;">
+                        <div style="width:20%; height:100%; background:#ff4d94; border-radius:3px; display:flex; align-items:center; padding-left:8px;">
+                            <span style="font-size:11px; font-weight:600; color:#fff;">20%</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                    <span style="width:200px; font-size:0.875rem; color:#333;">The Loyalist</span>
+                    <div style="flex:1; background:#f0f0f0; border-radius:3px; height:22px; overflow:hidden;">
+                        <div style="width:17%; height:100%; background:#ff4d94; border-radius:3px; display:flex; align-items:center; padding-left:8px;">
+                            <span style="font-size:11px; font-weight:600; color:#fff;">17%</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                    <span style="width:200px; font-size:0.875rem; color:#333;">The Delegated Buyer</span>
+                    <div style="flex:1; background:#f0f0f0; border-radius:3px; height:22px; overflow:hidden;">
+                        <div style="width:11%; height:100%; background:#ff4d94; border-radius:3px; display:flex; align-items:center; padding-left:8px;">
+                            <span style="font-size:11px; font-weight:600; color:#fff;">11%</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <span style="width:200px; font-size:0.875rem; color:#333;">The Visceral Buyer</span>
+                    <div style="flex:1; background:#f0f0f0; border-radius:3px; height:22px; overflow:hidden;">
+                        <div style="width:9%; height:100%; background:#ff4d94; border-radius:3px; display:flex; align-items:center; padding-left:8px;">
+                            <span style="font-size:11px; font-weight:600; color:#fff;">9%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="finding-card">
+            <h3>Triangulation Note</h3>
+            <p>The quantitative findings triangulate with the qualitative archetype framework in two important ways. First, the factor structure independently recovered the same conceptual distinctions the thematic analysis produced — most notably the separation of information-seeking behavior (F1) from institutional distrust (F2), which maps precisely to the behavioral boundary between The Strategist and The Skeptic. Both archetypes do extensive research; only The Skeptic enters that process with the premise that the system is working against them.</p>
+            <p style="margin-top:0.75rem;">Second, the prevalence data validates the core argument of the framework: the dominant car-buying experience in the U.S. is not one of enthusiasm or brand loyalty — it is one of anxiety management. The three highest-prevalence archetypes (The Strategist, The Exhausted Pragmatist, and The Skeptic, together 63% of buyers) are all defined primarily by their relationship to the stress of the process, not by their relationship to the product.</p>
+        </div>
+    </div>
+</section>
+
+<!-- END QUANT VALIDATION SECTION -->
+
+
         <section id="impact" class="content-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-rocket"></i></div>
