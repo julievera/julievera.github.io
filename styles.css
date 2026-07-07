@@ -730,6 +730,27 @@ footer {
     color: var(--accent);
 }
 
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: #9aa1af;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-links a:not(:last-child)::after {
+    content: "\00b7";
+    margin-left: 12px;
+    color: #565c68;
+}
+
 @media (max-width: 600px) {
     .footer-content { flex-direction: column; text-align: center; }
 }
