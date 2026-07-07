@@ -233,8 +233,8 @@ header {
     font-size: 14px;
     line-height: 1.4;
     color: #d7dbe4;
-    border-left: 2px solid var(--accent);
-    padding-left: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.18);
 }
 
 .proof-item strong {
@@ -343,17 +343,21 @@ header {
 .work-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
     margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--storm);
 }
 
 .tag {
-    font-size: 12px;
-    padding: 3px 9px;
-    border-radius: 3px;
-    background-color: var(--paper-alt);
-    color: var(--storm);
-    border: 1px solid var(--rule);
+    font-weight: 600;
+}
+
+.tag:not(:first-child)::before {
+    content: "\00b7";
+    margin: 0 8px;
+    color: var(--storm-light);
 }
 
 .work-outcome {
@@ -397,13 +401,13 @@ header {
 .territory-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px 40px;
+    gap: 18px 40px;
 }
 
 .territory-item {
     font-size: 14.5px;
-    padding: 12px 0 12px 16px;
-    border-left: 2px solid var(--rule);
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
     color: var(--storm);
 }
 
