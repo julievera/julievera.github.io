@@ -7,13 +7,17 @@
 :root {
     --ink: #16181d;
     --paper: #fcfcfb;
-    --paper-alt: #f1efea;
-    --storm: #5b6472;
-    --storm-light: #8b93a1;
+    --paper-alt: #f4f1eb;
+    --storm: #5f6673;
+    --storm-light: #9aa0aa;
     --rule: #dedad2;
     --accent: #FF00A8;
     --accent-deep: #a30071;
     --navy: #1d2333;
+
+    --font-serif: 'Source Serif 4', Georgia, serif;
+    --font-sans: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 }
 
 * {
@@ -29,17 +33,17 @@ html {
 body {
     background-color: var(--paper);
     color: var(--ink);
-    font-family: 'Inconsolata', monospace;
-    line-height: 1.6;
-    font-size: 17px;
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    line-height: 1.15;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
     color: var(--ink);
 }
 
