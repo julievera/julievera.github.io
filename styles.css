@@ -686,19 +686,16 @@ header {
 }
 
 .archive-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
     padding: 14px 0;
     border-top: 1px solid var(--rule);
     font-size: 15px;
-    flex-wrap: wrap;
 }
 
 .archive-row .a-meta {
+    display: block;
+    margin-top: 6px;
     color: var(--storm);
     font-size: 13px;
-    white-space: nowrap;
 }
 
 /* ============ Footer ============ */
