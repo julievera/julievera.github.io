@@ -213,6 +213,32 @@ header {
     margin-bottom: 32px;
 }
 
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+}
+
+.hero-links span {
+    color: var(--storm-light);
+    font-weight: 500;
+}
+
+.hero-links a {
+    color: var(--ink);
+    font-weight: 600;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.hero-links a:hover {
+    color: var(--accent-deep);
+    border-bottom-color: var(--accent-deep);
+}
+
 .hero-ctas {
     display: flex;
     gap: 14px;
