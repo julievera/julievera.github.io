@@ -15,38 +15,127 @@
     box-sizing: border-box;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     background: var(--paper);
     color: var(--ink);
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    max-width: 700px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 760px;
     margin: 0 auto;
     padding: 40px 20px 20px;
 }
 
-h1, h2, h3 {
-    font-family: Georgia, 'Times New Roman', serif;
+p {
+    margin: 0 0 1em;
+}
+
+ul,
+dl {
+    margin: 0 0 1em;
+    padding-left: 1.3em;
+}
+
+li {
+    margin-bottom: 0.35em;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 0.8em;
+}
+
+dd {
+    margin: 0.2em 0 0.8em 0;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
     font-weight: bold;
     line-height: 1.25;
     margin: 1.4em 0 0.4em;
 }
 
-h1 { font-size: 26px; margin-top: 0; }
-h2 { font-size: 19px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
-h3 { font-size: 16px; }
+h1 {
+    font-size: 30px;
+    margin-top: 0;
+}
 
-p { margin: 0 0 1em; }
+h2 {
+    font-size: 21px !important;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 4px;
+}
 
-a { color: var(--link); }
-a:hover { text-decoration: none; }
+h3 {
+    font-size: 16px;
+}
 
-ul, dl { margin: 0 0 1em; padding-left: 1.3em; }
-dt { font-weight: bold; margin-top: 0.8em; }
-dd { margin: 0.2em 0 0.8em 0; }
+/* Normalize historical inline type sizes in the page body.
+   The !important rules are intentional because several older HTML
+   files contain inline font-size declarations that otherwise outrank
+   this stylesheet.
+*/
 
-/* Header / nav */
+main p,
+main li,
+main dd,
+.territory-item {
+    font-size: 16px !important;
+    line-height: 1.55;
+}
+
+/* True secondary / metadata text */
+
+.breadcrumbs,
+.pub-venue,
+.a-meta,
+.credentials,
+.about-fact-block .fact-detail,
+footer {
+    font-size: 14px !important;
+    line-height: 1.45;
+}
+
+.page-header p {
+    font-size: 16px !important;
+}
+
+.role-line {
+    font-size: 17px !important;
+    font-style: italic;
+    color: var(--storm);
+    margin-top: -0.25em;
+}
+
+/* Links */
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+}
+
+/* Header / navigation */
+
 header {
     display: flex;
     align-items: center;
@@ -54,24 +143,53 @@ header {
     border-bottom: 1px solid var(--rule);
     padding-bottom: 10px;
     margin-bottom: 30px;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .logo-img {
     height: 28px;
+    width: auto;
     display: block;
 }
 
-nav a {
-    margin-left: 14px;
+.logo-container img {
+    display: block;
+}
+
+nav,
+.site-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 16px;
+}
+
+nav a,
+.site-nav a {
+    margin-left: 0;
     color: var(--ink);
     text-decoration: none;
 }
 
-nav a:hover, nav a.active { color: var(--link); text-decoration: underline; }
+nav a:hover,
+nav a.active,
+.site-nav a:hover,
+.site-nav a.active {
+    color: var(--link);
+    text-decoration: underline;
+}
 
 /* Profile block */
+
 .profile {
     display: flex;
     gap: 20px;
@@ -87,47 +205,126 @@ nav a:hover, nav a.active { color: var(--link); text-decoration: underline; }
     flex-shrink: 0;
 }
 
-.role-line {
-    font-style: italic;
-    color: var(--storm);
-    margin-top: -0.3em;
-}
-
 .more-links {
-    font-family: -apple-system, sans-serif;
-    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px !important;
+    line-height: 1.5;
     color: var(--storm);
     margin-bottom: 1.5em;
 }
 
-.more-links a { margin-right: 12px; }
-.more-links i, footer i { color: var(--storm); font-size: 12px; margin-right: 2px; }
-
-/* Proof / credentials */
-.credentials {
-    font-size: 15px;
-    color: var(--storm);
-    margin-bottom: 1.5em;
+.more-links a {
+    margin-right: 12px;
 }
 
-.credentials li { margin-bottom: 0.3em; }
+.more-links i,
+footer i {
+    color: var(--storm);
+    font-size: 12px;
+    margin-right: 2px;
+}
 
-/* Publication list */
+/* Sections / content */
+
+.section {
+    margin-bottom: 1.8em;
+}
+
+.section-head {
+    margin-bottom: 0.8em;
+}
+
+.concept-card,
+.territory-item {
+    margin-bottom: 1.25em;
+}
+
+.territory-item > b:first-child {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.archive-row {
+    margin-bottom: 0.8em;
+}
+
 .pub-list li {
-    margin-bottom: 0.7em;
+    margin-bottom: 0.8em;
 }
 
 .pub-venue {
-    font-family: -apple-system, sans-serif;
-    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--storm);
 }
 
 .placeholder {
     color: #b00;
-    font-family: -apple-system, sans-serif;
-    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
 }
+
+/* Contact form */
+
+.contact-form {
+    max-width: 540px;
+}
+
+.contact-form > div {
+    margin-bottom: 14px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 9px;
+    border: 1px solid #888888;
+    border-radius: 2px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    line-height: 1.4;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button,
+.btn {
+    appearance: none;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 7px 11px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.btn:hover {
+    border-color: var(--link);
+    color: var(--link);
+}
+
+.contact-links-alt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+}
+
+/* Footer */
 
 footer {
     background: none !important;
@@ -135,9 +332,80 @@ footer {
     padding-top: 15px;
     padding-bottom: 30px;
     border-top: 1px solid var(--rule);
-    font-family: -apple-system, sans-serif;
-    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--storm);
 }
 
-footer a { margin-right: 12px; }
+.footer-content {
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+footer a {
+    margin-right: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+    body {
+        padding: 24px 18px 18px;
+        font-size: 16px;
+    }
+
+    header,
+    .header-content {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    nav,
+    .site-nav {
+        gap: 8px 12px;
+    }
+
+    .profile {
+        gap: 16px;
+    }
+
+    .profile img {
+        width: 92px;
+        height: 92px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    .role-line {
+        font-size: 16px !important;
+    }
+
+    .contact-form {
+        max-width: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .profile {
+        display: block;
+    }
+
+    .profile img {
+        margin-bottom: 14px;
+    }
+
+    nav,
+    .site-nav {
+        font-size: 15px;
+    }
+}
